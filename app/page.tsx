@@ -1,4 +1,4 @@
-export default function Hugo() {
+ export default function Hugo() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F8F9FA', fontFamily: 'Arial, sans-serif' }}>
       {/* Barra superior */}
