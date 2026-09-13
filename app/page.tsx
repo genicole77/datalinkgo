@@ -55,7 +55,40 @@ export default function Home() {
 
         </div>
 
-        {/* NUEVA SECCIÓN: Monetización y Publicidad Corporativa */}
+        {/* NUEVA SECCIÓN: Recursos y Afiliados Recomendados */}
+        <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
+          💡 Herramientas y Recursos Recomendados
+        </h3>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginBottom: '40px' }}>
+          
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F97316' }}>
+            <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Infraestructura Web</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Servicios de hosting, despliegue rápido y optimización de servidores.</p>
+            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', backgroundColor: '#F59E0B', color: '#111827', padding: '10px 18px', borderRadius: '8px', textDecoration: 'none', fontWeight: '700', marginTop: '10px' }}>
+              Explorar Hosting
+            </a>
+          </div>
+
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
+            <h4 style={{ color: '#B91C1C', marginTop: 0, fontSize: '1.2rem' }}>Registro de Dominios</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Protección de marca y adquisición de nombres de dominio globales.</p>
+            <a href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', backgroundColor: '#B91C1C', color: '#FFFFFF', padding: '10px 18px', borderRadius: '8px', textDecoration: 'none', fontWeight: '700', marginTop: '10px' }}>
+              Registrar Dominio
+            </a>
+          </div>
+
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F97316' }}>
+            <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Kit Digital & Afiliados</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Recursos descargables, guías y herramientas de marketing digital.</p>
+            <span style={{ display: 'inline-block', backgroundColor: '#FEF3C7', color: '#D97706', padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem', fontWeight: '700', marginTop: '10px' }}>
+              Próximamente
+            </span>
+          </div>
+
+        </div>
+
+        {/* SECCIÓN: Monetización y Publicidad Corporativa */}
         <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '16px', padding: '30px', marginBottom: '40px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
           <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', marginTop: 0, marginBottom: '10px' }}>
             📢 Anúnciate en DataLinkGo
@@ -80,9 +113,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Módulos de Soporte y Recursos */}
+        {/* Módulos de Soporte y Recursos en Desarrollo */}
         <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
-          Herramientas y Recursos en Desarrollo
+          Próximos Lanzamientos
         </h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
