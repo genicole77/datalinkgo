@@ -512,3 +512,79 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 </section>
+
+{/* SECCIÓN DE KITS DIGITALES Y RECURSOS PRO */}
+<section className="py-12 px-6 bg-gray-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-10">
+      <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
+        Kits Digitales y Herramientas Estratégicas
+      </h2>
+      <p className="text-sm md:text-base opacity-80 max-w-2xl mx-auto">
+        Soluciones profesionales, recursos listos para usar y plataformas recomendadas para potenciar tus proyectos digitales.
+      </p>
+    </div>
+
+    {/* Cuadrícula de opciones */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      {/* Kit 1: Kit Emprendedor Pro */}
+      <div className="p-6 rounded-2xl border bg-gray-900 border-gray-800 transition-all duration-300 hover:shadow-xl flex flex-col justify-between">
+        <div>
+          <div className="text-3xl mb-4">⚡</div>
+          <h3 className="text-lg font-bold mb-2">Kit Emprendedor Pro</h3>
+          <p className="text-xs md:text-sm opacity-80 mb-6">
+            Herramientas, plantillas y guías especializadas para potenciar proyectos comerciales y de afiliación.
+          </p>
+        </div>
+        <a 
+          href="https://wa.me/2tu_numero_aqui?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20Emprendedor%20Pro" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Adquirir Kit
+        </a>
+      </div>
+
+      {/* Kit 2: Kit de Automatización */}
+      <div className="p-6 rounded-2xl border bg-gray-900 border-gray-800 transition-all duration-300 hover:shadow-xl flex flex-col justify-between">
+        <div>
+          <div className="text-3xl mb-4">🚀</div>
+          <h3 className="text-lg font-bold mb-2">Kit de Automatización</h3>
+          <p className="text-xs md:text-sm opacity-80 mb-6">
+            Sistemas automáticos de respuesta, gestión de clientes y optimización de embudos digitales.
+          </p>
+        </div>
+        <a 
+          href="https://wa.me/2tu_numero_aqui?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20de%20Automatizacion" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Explorar Sistema
+        </a>
+      </div>
+
+      {/* Herramienta / Dominio recomendado (Afiliado limpio) */}
+      <div className="p-6 rounded-2xl border bg-gray-900 border-gray-800 transition-all duration-300 hover:shadow-xl flex flex-col justify-between">
+        <div>
+          <div className="text-3xl mb-4">🌐</div>
+          <h3 className="text-lg font-bold mb-2">Registro de Dominios y Hosting</h3>
+          <p className="text-xs md:text-sm opacity-80 mb-6">
+            Asegura tu presencia en internet con dominios propios de forma rápida, segura y confiable.
+          </p>
+        </div>
+        <a 
+          href="https://www.namecheap.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Registrar Dominio
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
