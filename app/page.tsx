@@ -55,14 +55,38 @@ export default function Home() {
 
         </div>
 
-        {/* Nueva Sección de Módulos Avanzados */}
+        {/* NUEVA SECCIÓN: Monetización y Publicidad Corporativa */}
+        <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '16px', padding: '30px', marginBottom: '40px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+          <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', marginTop: 0, marginBottom: '10px' }}>
+            📢 Anúnciate en DataLinkGo
+          </h3>
+          <p style={{ color: '#4B5563', fontSize: '1rem', lineHeight: '1.6', marginBottom: '20px' }}>
+            Posiciona tu marca, producto o servicio frente a una audiencia tecnológica en crecimiento. Ofrecemos espacios publicitarios de alto impacto y patrocinios directos.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
+            <div style={{ backgroundColor: '#FFFFFF', padding: '15px 20px', borderRadius: '8px', borderLeft: '4px solid #B91C1C', flex: '1', minWidth: '220px' }}>
+              <strong style={{ color: '#111827', display: 'block', marginBottom: '5px' }}>Banners Destacados</strong>
+              <span style={{ color: '#4B5563', fontSize: '0.9rem' }}>Espacios visuales en la página principal.</span>
+            </div>
+            <div style={{ backgroundColor: '#FFFFFF', padding: '15px 20px', borderRadius: '8px', borderLeft: '4px solid #F59E0B', flex: '1', minWidth: '220px' }}>
+              <strong style={{ color: '#111827', display: 'block', marginBottom: '5px' }}>Patrocinio de Módulos</strong>
+              <span style={{ color: '#4B5563', fontSize: '0.9rem' }}>Enlaces directos a tus plataformas corporativas.</span>
+            </div>
+          </div>
+          <div style={{ marginTop: '20px' }}>
+            <a href="mailto:contacto@datalinkgo.com" style={{ display: 'inline-block', backgroundColor: '#F97316', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', textDecoration: 'none', fontWeight: '700', fontSize: '0.95rem' }}>
+              Contactar para Publicidad
+            </a>
+          </div>
+        </div>
+
+        {/* Módulos de Soporte y Recursos */}
         <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
           Herramientas y Recursos en Desarrollo
         </h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
           
-          {/* Enlace 4 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F59E0B' }}>
             <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Recursos y Guías</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Documentación técnica, guías operativas y manuales de proyectos.</p>
@@ -71,7 +95,6 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Enlace 5 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
             <h4 style={{ color: '#B91C1C', marginTop: 0, fontSize: '1.2rem' }}>Inteligencia Artificial</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Interfaces de automatización, generación de contenido y analítica.</p>
@@ -80,7 +103,6 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Enlace 6 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F59E0B' }}>
             <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Centro de Soporte</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Canales de contacto directo, reportes de estado y asistencia.</p>
