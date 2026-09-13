@@ -444,7 +444,7 @@ export default function DatalinkGoApp() {
   );
 }
 {/* SECCIÓN DE AFILIADOS Y PRODUCTOS RECOMENDADOS */}
-<section className={`py-12 px-6 ${darkMode ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'}`}>
+<section className="py-12 px-6 bg-gray-900 text-white">
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-10">
       <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
@@ -459,7 +459,7 @@ export default function DatalinkGoApp() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       
       {/* Tarjeta 1 */}
-      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+      <div className="p-6 rounded-2xl border bg-gray-950 border-gray-800 transition-all duration-300 hover:shadow-xl">
         <div className="text-3xl mb-4">⚡</div>
         <h3 className="text-lg font-bold mb-2">Kit de Herramientas Digitales</h3>
         <p className="text-xs md:text-sm opacity-80 mb-6">
@@ -476,7 +476,7 @@ export default function DatalinkGoApp() {
       </div>
 
       {/* Tarjeta 2 */}
-      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+      <div className="p-6 rounded-2xl border bg-gray-950 border-gray-800 transition-all duration-300 hover:shadow-xl">
         <div className="text-3xl mb-4">🚀</div>
         <h3 className="text-lg font-bold mb-2">Plataforma de Automatización</h3>
         <p className="text-xs md:text-sm opacity-80 mb-6">
@@ -493,7 +493,7 @@ export default function DatalinkGoApp() {
       </div>
 
       {/* Tarjeta 3 */}
-      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+      <div className="p-6 rounded-2xl border bg-gray-950 border-gray-800 transition-all duration-300 hover:shadow-xl">
         <div className="text-3xl mb-4">💡</div>
         <h3 className="text-lg font-bold mb-2">Recursos de Formación Pro</h3>
         <p className="text-xs md:text-sm opacity-80 mb-6">
