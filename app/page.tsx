@@ -21,10 +21,10 @@ export default function Home() {
       {/* Directorio de Enlaces y Módulos */}
       <section style={{ padding: '40px 20px', maxWidth: '1000px', margin: '0 auto' }}>
         <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
-          Directorio de Enlaces y Módulos
+          Directorio de Enlaces y Módulos Principales
         </h3>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginBottom: '40px' }}>
           
           {/* Enlace 1 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
@@ -54,7 +54,48 @@ export default function Home() {
           </div>
 
         </div>
+
+        {/* Nueva Sección de Módulos Avanzados */}
+        <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
+          Herramientas y Recursos en Desarrollo
+        </h3>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
+          
+          {/* Enlace 4 */}
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F59E0B' }}>
+            <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Recursos y Guías</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Documentación técnica, guías operativas y manuales de proyectos.</p>
+            <span style={{ display: 'inline-block', backgroundColor: '#E5E7EB', color: '#374151', padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem', fontWeight: '700', marginTop: '10px' }}>
+              Próximamente
+            </span>
+          </div>
+
+          {/* Enlace 5 */}
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
+            <h4 style={{ color: '#B91C1C', marginTop: 0, fontSize: '1.2rem' }}>Inteligencia Artificial</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Interfaces de automatización, generación de contenido y analítica.</p>
+            <span style={{ display: 'inline-block', backgroundColor: '#E5E7EB', color: '#374151', padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem', fontWeight: '700', marginTop: '10px' }}>
+              En Integración
+            </span>
+          </div>
+
+          {/* Enlace 6 */}
+          <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F59E0B' }}>
+            <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Centro de Soporte</h4>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Canales de contacto directo, reportes de estado y asistencia.</p>
+            <span style={{ display: 'inline-block', backgroundColor: '#E5E7EB', color: '#374151', padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem', fontWeight: '700', marginTop: '10px' }}>
+              Disponible Pronto
+            </span>
+          </div>
+
+        </div>
       </section>
+
+      {/* Pie de página */}
+      <footer style={{ textAlign: 'center', padding: '30px', backgroundColor: '#1F2937', color: '#F9FAFB', marginTop: '50px', borderTop: '4px solid #B91C1C' }}>
+        <p style={{ margin: 0, fontSize: '0.95rem' }}>DataLinkGo © 2026 — Todos los derechos reservados.</p>
+      </footer>
 
     </div>
   );
