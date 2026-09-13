@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { 
-  Menu, X, Home, BookOpen, Share2, Video, FileText, 
-  Settings, ShoppingBag, Cpu, MessageSquare, Sun, Moon, 
-  ExternalLink, ChevronRight, CheckCircle2, ArrowRight, ShieldCheck, Zap
+  Menu, X, Home, Share2, Video, 
+  ShoppingBag, MessageSquare, Sun, Moon, 
+  ChevronRight, CheckCircle2, ArrowRight, Zap
 } from 'lucide-react';
 
 export default function DatalinkGoApp() {
@@ -12,10 +12,8 @@ export default function DatalinkGoApp() {
   const [activeTab, setActiveTab] = useState('inicio');
   const [darkMode, setDarkMode] = useState(true);
   
-  // Estados para los modales interactivos del Catálogo de Kits
   const [selectedKit, setSelectedKit] = useState<{title: string, price: string, desc: string, features: string[]} | null>(null);
 
-  // Datos de los Kits Digitales
   const kitsData = [
     {
       id: 'emprendedor-pro',
@@ -33,7 +31,6 @@ export default function DatalinkGoApp() {
     }
   ];
 
-  // Enlace base de WhatsApp con mensaje personalizado
   const getWhatsAppLink = (kitName: string) => {
     const message = encodeURIComponent(`Hola, estoy interesado en adquirir o recibir más información sobre el ${kitName} en DataLinkGo.`);
     return `https://wa.me/?text=${message}`;
@@ -42,7 +39,7 @@ export default function DatalinkGoApp() {
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-[#0b0f19] text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
       
-      {/* 1. BARRA DE NAVEGACIÓN SUPERIOR */}
+      {/* BARRA SUPERIOR */}
       <header className={`sticky top-0 z-40 border-b ${darkMode ? 'bg-[#111827]/90 border-gray-800' : 'bg-white/90 border-gray-200'} backdrop-blur-md`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
@@ -66,7 +63,6 @@ export default function DatalinkGoApp() {
             </div>
           </div>
 
-          {/* Navegación Principal */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             <button 
               onClick={() => setActiveTab('inicio')}
@@ -94,7 +90,6 @@ export default function DatalinkGoApp() {
             </button>
           </nav>
 
-          {/* Controles Derechos: Consultas, Tema y Perfil */}
           <div className="flex items-center space-x-3">
             <button 
               onClick={() => setActiveTab('consultas')}
@@ -117,7 +112,7 @@ export default function DatalinkGoApp() {
 
       <div className="flex">
         
-        {/* 2. MENÚ LATERAL DESPLEGABLE */}
+        {/* MENÚ LATERAL */}
         {sidebarOpen && (
           <aside className={`w-72 fixed inset-y-0 left-0 z-30 pt-20 pb-6 px-4 border-r flex flex-col justify-between shadow-2xl transition-all duration-300 ${darkMode ? 'bg-[#111827] border-gray-800' : 'bg-white border-gray-200'}`}>
             <div className="space-y-6">
@@ -183,14 +178,12 @@ export default function DatalinkGoApp() {
           </aside>
         )}
 
-        {/* 3. CONTENIDO PRINCIPAL DINÁMICO */}
+        {/* CONTENIDO PRINCIPAL */}
         <main className={`flex-1 transition-all duration-300 px-4 sm:px-8 py-8 ${sidebarOpen ? 'md:ml-72' : 'ml-0'}`}>
           <div className="max-w-6xl mx-auto space-y-8">
 
-            {/* VISTA: INICIO */}
             {activeTab === 'inicio' && (
-              <div className="space-y-8 animate-fadeIn">
-                {/* Banner Principal */}
+              <div className="space-y-8">
                 <div className={`relative overflow-hidden rounded-3xl p-8 sm:p-12 border bg-gradient-to-br ${darkMode ? 'from-gray-900 via-gray-900 to-red-950/40 border-gray-800' : 'from-white via-orange-50/50 to-red-50 border-gray-200'} shadow-2xl`}>
                   <div className="relative z-10 max-w-2xl space-y-4">
                     <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-500/10 text-red-500 border border-red-500/20">
@@ -220,9 +213,7 @@ export default function DatalinkGoApp() {
                   </div>
                 </div>
 
-                {/* Tarjetas de Acceso Rápido */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  
                   <div 
                     onClick={() => setActiveTab('kits')}
                     className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800 hover:border-red-500/50' : 'bg-white border-gray-200 hover:border-red-400'} shadow-lg group`}
@@ -270,14 +261,12 @@ export default function DatalinkGoApp() {
                       <span>Ver detalles</span> <ChevronRight size={16} />
                     </span>
                   </div>
-
                 </div>
               </div>
             )}
 
-            {/* VISTA: KITS DIGITALES (¡AHORA 100% INTERACTIVOS Y CON WHATSAPP!) */}
             {activeTab === 'kits' && (
-              <div className="space-y-8 animate-fadeIn">
+              <div className="space-y-8">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-black tracking-tight">Catálogo de Kits Digitales</h2>
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -334,9 +323,8 @@ export default function DatalinkGoApp() {
               </div>
             )}
 
-            {/* VISTA: AFILIADOS */}
             {activeTab === 'afiliados' && (
-              <div className="space-y-6 animate-fadeIn">
+              <div className="space-y-6">
                 <h2 className="text-3xl font-black tracking-tight">Plataforma de Afiliados</h2>
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Gestiona tus enlaces estratégicos, pasarelas y programas de referidos con alta tasa de conversión.
@@ -350,9 +338,8 @@ export default function DatalinkGoApp() {
               </div>
             )}
 
-            {/* VISTA: CREADORES */}
             {activeTab === 'creadores' && (
-              <div className="space-y-6 animate-fadeIn">
+              <div className="space-y-6">
                 <h2 className="text-3xl font-black tracking-tight">Creadores y Publicidad</h2>
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Herramientas avanzadas para la gestión de contenido en YouTube, producción de videos y monetización digital.
@@ -366,9 +353,8 @@ export default function DatalinkGoApp() {
               </div>
             )}
 
-            {/* VISTA: CONSULTAS */}
             {activeTab === 'consultas' && (
-              <div className="space-y-6 animate-fadeIn max-w-2xl mx-auto">
+              <div className="space-y-6 max-w-2xl mx-auto">
                 <div className="text-center space-y-2">
                   <h2 className="text-3xl font-black tracking-tight">Módulo de Consultas y Tarifarios</h2>
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -404,7 +390,7 @@ export default function DatalinkGoApp() {
 
       {/* MODAL DE DETALLES DEL KIT */}
       {selectedKit && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
           <div className={`max-w-md w-full p-6 rounded-3xl border ${darkMode ? 'bg-gray-900 border-gray-800 text-white' : 'bg-white border-gray-200 text-gray-900'} shadow-2xl relative space-y-4`}>
             <button onClick={() => setSelectedKit(null)} className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white">
               <X size={20} />
@@ -443,7 +429,7 @@ export default function DatalinkGoApp() {
         </div>
       )}
 
-      {/* BOTÓN FLOTANTE DE WHATSAPP GLOBAL */}
+      {/* BOTÓN FLOTANTE DE WHATSAPP */}
       <a 
         href="https://wa.me/?text=Hola,%20vengo%20desde%20DataLinkGo%20y%20deseo%20más%20información." 
         target="_blank" 
