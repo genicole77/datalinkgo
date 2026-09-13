@@ -26,7 +26,6 @@ export default function Home() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', marginBottom: '40px' }}>
           
-          {/* Enlace 1 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
             <h4 style={{ color: '#B91C1C', marginTop: 0, fontSize: '1.2rem' }}>Canales y Contenido</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Acceso directo a producción de videos, historias y material multimedia.</p>
@@ -35,7 +34,6 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Enlace 2 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #F59E0B' }}>
             <h4 style={{ color: '#D97706', marginTop: 0, fontSize: '1.2rem' }}>Gestión de Dominios</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Panel de control de plataformas, enlaces web y configuraciones.</p>
@@ -44,7 +42,6 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Enlace 3 */}
           <div style={{ backgroundColor: '#FFFFFF', border: '2px solid #F3F4F6', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderTop: '6px solid #B91C1C' }}>
             <h4 style={{ color: '#B91C1C', marginTop: 0, fontSize: '1.2rem' }}>Plataforma Digital y Vercel</h4>
             <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.5' }}>Monitoreo de despliegues, sistemas activos y automatización.</p>
@@ -55,7 +52,7 @@ export default function Home() {
 
         </div>
 
-        {/* NUEVA SECCIÓN: Recursos y Afiliados Recomendados */}
+        {/* RECURSOS Y AFILIADOS RECOMENDADOS */}
         <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
           💡 Herramientas y Recursos Recomendados
         </h3>
@@ -88,32 +85,48 @@ export default function Home() {
 
         </div>
 
-        {/* SECCIÓN: Monetización y Publicidad Corporativa */}
-        <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '16px', padding: '30px', marginBottom: '40px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
-          <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', marginTop: 0, marginBottom: '10px' }}>
-            📢 Anúnciate en DataLinkGo
-          </h3>
-          <p style={{ color: '#4B5563', fontSize: '1rem', lineHeight: '1.6', marginBottom: '20px' }}>
-            Posiciona tu marca, producto o servicio frente a una audiencia tecnológica en crecimiento. Ofrecemos espacios publicitarios de alto impacto y patrocinios directos.
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
-            <div style={{ backgroundColor: '#FFFFFF', padding: '15px 20px', borderRadius: '8px', borderLeft: '4px solid #B91C1C', flex: '1', minWidth: '220px' }}>
-              <strong style={{ color: '#111827', display: 'block', marginBottom: '5px' }}>Banners Destacados</strong>
-              <span style={{ color: '#4B5563', fontSize: '0.9rem' }}>Espacios visuales en la página principal.</span>
+        {/* SECCIÓN DOBLE: WHATSAPP DIRECTO Y FORMULARIO CORPORATIVO */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px', marginBottom: '40px' }}>
+          
+          {/* Tarjeta de WhatsApp Directo */}
+          <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '16px', padding: '30px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <h3 style={{ fontSize: '1.5rem', color: '#B91C1C', marginTop: 0, marginBottom: '10px' }}>
+                💬 Contacto Inmediato
+              </h3>
+              <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '20px' }}>
+                ¿Quieres negociar un espacio publicitario o patrocinio de forma rápida? Escríbenos directamente al chat.
+              </p>
             </div>
-            <div style={{ backgroundColor: '#FFFFFF', padding: '15px 20px', borderRadius: '8px', borderLeft: '4px solid #F59E0B', flex: '1', minWidth: '220px' }}>
-              <strong style={{ color: '#111827', display: 'block', marginBottom: '5px' }}>Patrocinio de Módulos</strong>
-              <span style={{ color: '#4B5563', fontSize: '0.9rem' }}>Enlaces directos a tus plataformas corporativas.</span>
+            <div>
+              <a href="https://wa.me/?text=Hola%20DataLinkGo,%20estoy%20interesado%20en%20espacios%20publicitarios%20y%20patrocinios." target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', backgroundColor: '#25D366', color: '#FFFFFF', padding: '12px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: '700', fontSize: '1rem' }}>
+                Hablar por WhatsApp
+              </a>
             </div>
           </div>
-          <div style={{ marginTop: '20px' }}>
-            <a href="mailto:contacto@datalinkgo.com" style={{ display: 'inline-block', backgroundColor: '#F97316', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', textDecoration: 'none', fontWeight: '700', fontSize: '0.95rem' }}>
-              Contactar para Publicidad
-            </a>
+
+          {/* Tarjeta de Formulario Corporativo */}
+          <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '16px', padding: '30px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+            <h3 style={{ fontSize: '1.5rem', color: '#B91C1C', marginTop: 0, marginBottom: '10px' }}>
+              📋 Formulario de Publicidad
+            </h3>
+            <p style={{ color: '#4B5563', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '15px' }}>
+              Déjanos tus datos corporativos para enviarte nuestro tarifario de marcas.
+            </p>
+            
+            {/* Simulación de Formulario Web Profesional */}
+            <form onSubmit={(e) => { e.preventDefault(); alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo muy pronto.'); }} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <input type="text" placeholder="Nombre de tu Empresa o Marca" required style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #D1D5DB', fontSize: '0.9rem', outline: 'none' }} />
+              <input type="email" placeholder="Correo electrónico de contacto" required style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #D1D5DB', fontSize: '0.9rem', outline: 'none' }} />
+              <button type="submit" style={{ backgroundColor: '#F97316', color: '#FFFFFF', border: 'none', padding: '11px', borderRadius: '6px', fontWeight: '700', fontSize: '0.95rem', cursor: 'pointer' }}>
+                Enviar Solicitud
+              </button>
+            </form>
           </div>
+
         </div>
 
-        {/* Módulos de Soporte y Recursos en Desarrollo */}
+        {/* Próximos Lanzamientos */}
         <h3 style={{ fontSize: '1.6rem', color: '#B91C1C', borderBottom: '3px solid #F59E0B', paddingBottom: '10px', marginBottom: '30px' }}>
           Próximos Lanzamientos
         </h3>
