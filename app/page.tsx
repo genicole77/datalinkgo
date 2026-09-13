@@ -265,6 +265,79 @@ export default function DatalinkGoApp() {
               </div>
             )}
 
+          {/* SECCIÓN NUEVA: KITS Y AFILIADOS DIRECTOS */}
+<div className="mt-8">
+  <div className="text-center mb-6">
+    <h3 className="text-2xl font-bold tracking-tight">Kits y Herramientas Estratégicas</h3>
+    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mt-1`}>
+      Recursos optimizados para impulsar tus proyectos y negocios digitales sin restricciones.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    {/* Tarjeta 1: Kit Emprendedor Pro */}
+    <div className={`p-6 rounded-2xl border transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}>
+      <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+        <span className="text-2xl">⚡</span>
+      </div>
+      <h4 className="font-bold text-lg mb-2">Kit Emprendedor Pro</h4>
+      <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+        Herramientas, plantillas y guías especializadas para potenciar proyectos comerciales y de afiliación.
+      </p>
+      <a 
+        href="https://wa.me/58XXXXXXXXXX?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20Emprendedor%20Pro"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+      >
+        <span>Adquirir Kit</span>
+        <span>→</span>
+      </a>
+    </div>
+
+    {/* Tarjeta 2: Kit de Automatización */}
+    <div className={`p-6 rounded-2xl border transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}>
+      <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+        <span className="text-2xl">🚀</span>
+      </div>
+      <h4 className="font-bold text-lg mb-2">Kit de Automatización</h4>
+      <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+        Sistemas automáticos de respuesta, gestión de clientes y optimización de embudos digitales.
+      </p>
+      <a 
+        href="https://wa.me/58XXXXXXXXXX?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20de%20Automatizacion"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+      >
+        <span>Explorar Sistema</span>
+        <span>→</span>
+      </a>
+    </div>
+
+    {/* Tarjeta 3: Dominios y Hosting (Namecheap) */}
+    <div className={`p-6 rounded-2xl border transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}>
+      <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+        <span className="text-2xl">🌐</span>
+      </div>
+      <h4 className="font-bold text-lg mb-2">Registro de Dominios</h4>
+      <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+        Asegura tu presencia en internet con dominios propios de forma rápida, segura y confiable.
+      </p>
+      <a 
+        href="https://www.namecheap.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+      >
+        <span>Registrar Dominio</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</div>
             {activeTab === 'kits' && (
               <div className="space-y-8">
                 <div className="space-y-2">
