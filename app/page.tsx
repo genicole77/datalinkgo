@@ -363,7 +363,7 @@ export default function DatalinkGoApp() {
                 </div>
 
                 <div className={`p-8 rounded-3xl border ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} shadow-xl`}>
-                <form action="https://formspree.io/f/tu-codigo" method="POST" className="space-y-4">
+                <form action="https://formspree.io/f/mljeypjv" method="POST" className="space-y-4">
                     <div>
                       <label className="block text-xs font-bold uppercase mb-1">Nombre Completo</label>
                       <input type="text" name="name" required className={`w-full px-4 py-3 rounded-xl border text-sm outline-none transition-colors ${darkMode ? 'bg-gray-800 border-gray-700 focus:border-red-500' : 'bg-gray-50 border-gray-200 focus:border-red-500'}`} placeholder="Tu nombre" />
