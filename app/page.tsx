@@ -1,4 +1,23 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [enviado, setEnviado] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!nombre || !email) {
+      alert('Por favor completa todos los campos.');
+      return;
+    }
+    setEnviado(true);
+    // Abre el cliente de correo automáticamente con los datos listos
+    window.location.href = `mailto:contacto@datalinkgo.com?subject=Solicitud de Publicidad de ${encodeURIComponent(nombre)}&body=Hola, mi correo es ${encodeURIComponent(email)}. Estoy interesado en los espacios publicitarios.`;
+  };
+
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#FFFFFF', color: '#1F2937', fontFamily: 'system-ui, sans-serif' }}>
       
@@ -59,11 +78,13 @@ export default function Home() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '40px' }}>
           
-          <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '12px', padding: '25px' }}>
-            <h4 style={{ color: '#B91C1C', marginTop: 0 }}>Contacto Inmediato</h4>
-            <p style={{ color: '#4B5563', fontSize: '0.9rem', marginBottom: '20px' }}>
-              ¿Quieres negociar un espacio publicitario de forma rápida? Escríbenos al chat.
-            </p>
+          <div style={{ backgroundColor: '#FFFBEB', border: '2px solid #F59E0B', borderRadius: '12px', padding: '25px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <h4 style={{ color: '#B91C1C', marginTop: 0 }}>Contacto Inmediato</h4>
+              <p style={{ color: '#4B5563', fontSize: '0.9rem', marginBottom: '20px' }}>
+                ¿Quieres negociar un espacio publicitario de forma rápida? Escríbenos al chat directo.
+              </p>
+            </div>
             <a href="https://wa.me/?text=Hola%20DataLinkGo,%20estoy%20interesado%20en%20espacios%20publicitarios." target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', backgroundColor: '#25D366', color: '#FFFFFF', padding: '10px', borderRadius: '6px', textDecoration: 'none', fontWeight: '700' }}>
               Hablar por WhatsApp
             </a>
@@ -74,13 +95,32 @@ export default function Home() {
             <p style={{ color: '#4B5563', fontSize: '0.9rem', marginBottom: '15px' }}>
               Déjanos tus datos corporativos para enviarte nuestro tarifario.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <input type="text" placeholder="Nombre de tu Marca" style={{ padding: '8px 12px', borderRadius: '6px', border: '1px solid #D1D5DB' }} />
-              <input type="email" placeholder="Correo electrónico" style={{ padding: '8px 12px', borderRadius: '6px', border: '1px solid #D1D5DB' }} />
-              <button style={{ backgroundColor: '#F97316', color: '#FFFFFF', border: 'none', padding: '10px', borderRadius: '6px', fontWeight: '700', cursor: 'pointer' }}>
-                Enviar Solicitud
-              </button>
-            </div>
+            
+            {enviado ? (
+              <div style={{ backgroundColor: '#DEF7EC', color: '#03543F', padding: '15px', borderRadius: '6px', textAlign: 'center', fontWeight: '700' }}>
+                ¡Solicitud lista! Abriendo tu correo...
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <input 
+                  type="text" 
+                  placeholder="Nombre de tu Marca" 
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
+                  style={{ padding: '8px 12px', borderRadius: '6px', border: '1px solid #D1D5DB' }} 
+                />
+                <input 
+                  type="email" 
+                  placeholder="Correo electrónico" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  style={{ padding: '8px 12px', borderRadius: '6px', border: '1px solid #D1D5DB' }} 
+                />
+                <button type="submit" style={{ backgroundColor: '#F97316', color: '#FFFFFF', border: 'none', padding: '10px', borderRadius: '6px', fontWeight: '700', cursor: 'pointer' }}>
+                  Enviar Solicitud
+                </button>
+              </form>
+            )}
           </div>
 
         </div>
