@@ -213,57 +213,79 @@ export default function DatalinkGoApp() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div 
-                    onClick={() => setActiveTab('kits')}
-                    className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800 hover:border-red-500/50' : 'bg-white border-gray-200 hover:border-red-400'} shadow-lg group`}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                      <ShoppingBag size={24} />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">Catálogo de Kits Digitales</h3>
-                    <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Recursos, plantillas y guías especializadas para potenciar proyectos comerciales y de afiliados.
-                    </p>
-                    <span className="text-sm font-bold text-red-500 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-                      <span>Ver catálogo</span> <ChevronRight size={16} />
-                    </span>
-                  </div>
+            {/* CUADRÍCULA PRINCIPAL: KITS Y AFILIADOS */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  
+  {/* Tarjeta 1: Kit Emprendedor Pro */}
+  <div 
+    onClick={() => setActiveTab('kits')}
+    className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}
+  >
+    <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+      <span className="text-2xl">⚡</span>
+    </div>
+    <h3 className="font-bold text-lg mb-2">Kit Emprendedor Pro</h3>
+    <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+      Herramientas, plantillas y guías especializadas para potenciar proyectos comerciales y de afiliación.
+    </p>
+    <a 
+      href="https://wa.me/2tu_numero_aqui?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20Emprendedor%20Pro"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+    >
+      <span>Adquirir Kit</span>
+      <span>→</span>
+    </a>
+  </div>
 
-                  <div 
-                    onClick={() => setActiveTab('afiliados')}
-                    className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800 hover:border-red-500/50' : 'bg-white border-gray-200 hover:border-red-400'} shadow-lg group`}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                      <Share2 size={24} />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">Plataforma de Afiliados</h3>
-                    <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Pasarelas, enlaces estratégicos y herramientas de monetización optimizadas para tu negocio.
-                    </p>
-                    <span className="text-sm font-bold text-orange-500 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-                      <span>Explorador</span> <ChevronRight size={16} />
-                    </span>
-                  </div>
+  {/* Tarjeta 2: Kit de Automatización */}
+  <div 
+    onClick={() => setActiveTab('kits')}
+    className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}
+  >
+    <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+      <span className="text-2xl">🚀</span>
+    </div>
+    <h3 className="font-bold text-lg mb-2">Kit de Automatización</h3>
+    <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+      Sistemas automáticos de respuesta, gestión de clientes y optimización de embudos digitales.
+    </p>
+    <a 
+      href="https://wa.me/2tu_numero_aqui?text=Hola,%20estoy%20interesado%20en%20el%20Kit%20de%20Automatizacion"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+    >
+      <span>Explorar Sistema</span>
+      <span>→</span>
+    </a>
+  </div>
 
-                  <div 
-                    onClick={() => setActiveTab('creadores')}
-                    className={`p-6 rounded-2xl border cursor-pointer transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800 hover:border-red-500/50' : 'bg-white border-gray-200 hover:border-red-400'} shadow-lg group`}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                      <Video size={24} />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2">Creadores y Publicidad</h3>
-                    <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Herramientas, estrategias de video, storytelling y gestión publicitaria para canales digitales.
-                    </p>
-                    <span className="text-sm font-bold text-red-500 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-                      <span>Ver detalles</span> <ChevronRight size={16} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            )}
+  {/* Tarjeta 3: Dominios y Hosting (Afiliado limpio Namecheap) */}
+  <div 
+    
+    className={`p-6 rounded-2xl border transition-all transform hover:-translate-y-1 ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} group`}
+  >
+    <div className="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+      <span className="text-2xl">🌐</span>
+    </div>
+    <h3 className="font-bold text-lg mb-2">Registro de Dominios</h3>
+    <p className={`text-xs md:text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+      Asegura tu presencia en internet con dominios propios de forma rápida, segura y confiable.
+    </p>
+    <a 
+      href="https://www.namecheap.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="inline-flex items-center text-sm font-bold text-red-500 group-hover:text-red-400 space-x-1"
+    >
+      <span>Registrar Dominio</span>
+      <span>→</span>
+    </a>
+  </div>
+
+</div>
 
             {activeTab === 'kits' && (
               <div className="space-y-8">
