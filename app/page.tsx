@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 
-export default function ActualizarPagina() {
+export default function Home() {
   const [enviado, setEnviado] = useState(false);
   const [cargando, setCargando] = useState(false);
 
