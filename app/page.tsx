@@ -22,20 +22,23 @@ export default function Home() {
         <h3 style={{ textAlign: 'center', color: '#334155', marginBottom: '30px', fontSize: '1.5rem' }}>Accesos Directos y Módulos</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           
-          <a href="#analitica" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>📊 Panel de Analítica</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Monitoreo de métricas, rendimiento y estadísticas en tiempo real.</p>
-          </a>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Monitoreo de métricas, rendimiento y estadísticas en tiempo real.</p>
+            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+          </div>
 
-          <a href="#directorio" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🔗 Directorio de Enlaces</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Colección organizada de recursos web y accesos externos de interés.</p>
-          </a>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Colección organizada de recursos web y accesos externos de interés.</p>
+            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+          </div>
 
-          <a href="#utilidades" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🛠️ Centro de Utilidades</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Herramientas de automatización y utilidades digitales a la medida.</p>
-          </a>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Herramientas de automatización y utilidades digitales a la medida.</p>
+            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+          </div>
 
         </div>
       </section>
@@ -50,7 +53,7 @@ export default function Home() {
             <input type="text" placeholder="Tu nombre" style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }} />
             <input type="email" placeholder="Tu correo electrónico" style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }} />
             <textarea placeholder="¿En qué podemos ayudarte?" rows={3} style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none', resize: 'vertical' }}></textarea>
-            <button style={{ backgroundColor: '#2563eb', color: '#ffffff', padding: '12px', borderRadius: '8px', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', marginTop: '5px' }}>
+            <button onClick={() => alert('¡Mensaje preparado con éxito! Próximamente conectado al servidor.')} style={{ backgroundColor: '#2563eb', color: '#ffffff', padding: '12px', borderRadius: '8px', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', marginTop: '5px' }}>
               Enviar Mensaje
             </button>
           </div>
