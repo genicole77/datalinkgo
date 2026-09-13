@@ -4,7 +4,7 @@ export default function Home() {
       {/* Barra superior */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0' }}>
         <h2 style={{ margin: 0, color: '#0f172a', fontSize: '1.5rem' }}>DataLinkGo</h2>
-        <span style={{ fontSize: '0.9rem', color: '#64748b', backgroundColor: '#f1f5f9', padding: '6px 12px', borderRadius: '20px' }}>En Desarrollo 🚀</span>
+        <span style={{ fontSize: '0.9rem', color: '#16a34a', backgroundColor: '#dcfce7', padding: '6px 12px', borderRadius: '20px', fontWeight: 'bold' }}>Sistema Activo 🟢</span>
       </header>
 
       {/* Sección Hero / Principal */}
@@ -23,19 +23,19 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           
           {/* Tarjeta 1 */}
-          <a href="#" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'transform 0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <a href="#analitica" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>📊 Panel de Analítica</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Monitoreo de métricas, rendimiento y estadísticas en tiempo real.</p>
           </a>
 
           {/* Tarjeta 2 */}
-          <a href="#" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <a href="#directorio" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🔗 Directorio de Enlaces</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Colección organizada de recursos web y accesos externos de interés.</p>
           </a>
 
           {/* Tarjeta 3 */}
-          <a href="#" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <a href="#utilidades" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🛠️ Centro de Utilidades</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Herramientas de automatización y utilidades digitales a la medida.</p>
           </a>
