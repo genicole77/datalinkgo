@@ -13,31 +13,31 @@ export default function Home() {
           Conecta tus datos, potencia tu <span style={{ color: '#2563eb' }}>futuro digital</span>
         </h1>
         <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: '1.5', marginBottom: '30px' }}>
-          Tu centro de acceso rápido para herramientas, recursos y plataformas tecnológicas.
+          Plataforma centralizada de gestión tecnológica, enlaces y automatización de procesos.
         </p>
       </section>
 
-      {/* Sección de Enlaces y Módulos Interactivos */}
-      <section style={{ padding: '10px 20px 40px 20px', maxWidth: '900px', margin: '0 auto' }}>
-        <h3 style={{ textAlign: 'center', color: '#334155', marginBottom: '30px', fontSize: '1.5rem' }}>Accesos Directos y Módulos</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+      {/* Sección de Proyectos Destacados */}
+      <section style={{ padding: '10px 20px 40px 20px', maxWidth: '1000px', margin: '0 auto' }}>
+        <h3 style={{ textAlign: 'center', color: '#334155', marginBottom: '30px', fontSize: '1.5rem' }}>Soluciones y Proyectos en Curso</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
           
           <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>📊 Panel de Analítica</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Monitoreo de métricas, rendimiento y estadísticas en tiempo real.</p>
-            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+            <span style={{ fontSize: '0.8rem', color: '#0284c7', backgroundColor: '#e0f2fe', padding: '4px 10px', borderRadius: '4px', fontWeight: 'bold' }}>E-Commerce</span>
+            <h4 style={{ color: '#0f172a', margin: '12px 0 8px 0', fontSize: '1.2rem' }}>Plataforma Digital</h4>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Estrategias de distribución y catálogos interactivos conectados a la red.</p>
           </div>
 
           <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🔗 Directorio de Enlaces</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Colección organizada de recursos web y accesos externos de interés.</p>
-            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+            <span style={{ fontSize: '0.8rem', color: '#16a34a', backgroundColor: '#dcfce7', padding: '4px 10px', borderRadius: '4px', fontWeight: 'bold' }}>Automatización</span>
+            <h4 style={{ color: '#0f172a', margin: '12px 0 8px 0', fontSize: '1.2rem' }}>Herramientas Cloud</h4>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Despliegue de scripts y utilidades en la nube para optimizar operaciones.</p>
           </div>
 
           <div style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-            <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🛠️ Centro de Utilidades</h4>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Herramientas de automatización y utilidades digitales a la medida.</p>
-            <span style={{ fontSize: '0.85rem', color: '#2563eb', fontWeight: 'bold', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px' }}>Módulo Habilitado</span>
+            <span style={{ fontSize: '0.8rem', color: '#7c3aed', backgroundColor: '#f3e8ff', padding: '4px 10px', borderRadius: '4px', fontWeight: 'bold' }}>Contenido</span>
+            <h4 style={{ color: '#0f172a', margin: '12px 0 8px 0', fontSize: '1.2rem' }}>Hub de Medios</h4>
+            <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0 0 15px 0' }}>Centralización de canales de comunicación, transmisiones y recursos visuales.</p>
           </div>
 
         </div>
