@@ -18,28 +18,42 @@ export default function Home() {
       </section>
 
       {/* Sección de Enlaces y Módulos Interactivos */}
-      <section style={{ padding: '20px 20px 60px 20px', maxWidth: '900px', margin: '0 auto' }}>
+      <section style={{ padding: '10px 20px 40px 20px', maxWidth: '900px', margin: '0 auto' }}>
         <h3 style={{ textAlign: 'center', color: '#334155', marginBottom: '30px', fontSize: '1.5rem' }}>Accesos Directos y Módulos</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           
-          {/* Tarjeta 1 */}
-          <a href="#analitica" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <a href="#analitica" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>📊 Panel de Analítica</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Monitoreo de métricas, rendimiento y estadísticas en tiempo real.</p>
           </a>
 
-          {/* Tarjeta 2 */}
-          <a href="#directorio" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <a href="#directorio" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🔗 Directorio de Enlaces</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Colección organizada de recursos web y accesos externos de interés.</p>
           </a>
 
-          {/* Tarjeta 3 */}
-          <a href="#utilidades" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', transition: 'all 0.3s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+          <a href="#utilidades" style={{ textDecoration: 'none', background: '#ffffff', padding: '25px', borderRadius: '12px', border: '1px solid #e2e8f0', display: 'block', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
             <h4 style={{ color: '#2563eb', margin: '0 0 10px 0', fontSize: '1.2rem' }}>🛠️ Centro de Utilidades</h4>
             <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>Herramientas de automatización y utilidades digitales a la medida.</p>
           </a>
 
+        </div>
+      </section>
+
+      {/* Sección de Contacto */}
+      <section style={{ padding: '40px 20px 60px 20px', maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ background: '#ffffff', padding: '40px', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.05)' }}>
+          <h3 style={{ color: '#0f172a', marginBottom: '10px', fontSize: '1.5rem' }}>¿Tienes algún proyecto en mente?</h3>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '25px' }}>Comunícate con nosotros para integrar nuevas soluciones a tu medida.</p>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <input type="text" placeholder="Tu nombre" style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }} />
+            <input type="email" placeholder="Tu correo electrónico" style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }} />
+            <textarea placeholder="¿En qué podemos ayudarte?" rows={3} style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none', resize: 'vertical' }}></textarea>
+            <button style={{ backgroundColor: '#2563eb', color: '#ffffff', padding: '12px', borderRadius: '8px', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', marginTop: '5px' }}>
+              Enviar Mensaje
+            </button>
+          </div>
         </div>
       </section>
 
