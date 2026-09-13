@@ -443,3 +443,72 @@ export default function DatalinkGoApp() {
     </div>
   );
 }
+{/* SECCIÓN DE AFILIADOS Y PRODUCTOS RECOMENDADOS */}
+<section className={`py-12 px-6 ${darkMode ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'}`}>
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-10">
+      <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
+        Recursos y Herramientas Recomendadas
+      </h2>
+      <p className="text-sm md:text-base opacity-80 max-w-2xl mx-auto">
+        Herramientas digitales, plataformas y kits seleccionados estratégicamente para impulsar tus proyectos y potenciar tus resultados.
+      </p>
+    </div>
+
+    {/* Cuadrícula de productos de afiliado */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      {/* Tarjeta 1 */}
+      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+        <div className="text-3xl mb-4">⚡</div>
+        <h3 className="text-lg font-bold mb-2">Kit de Herramientas Digitales</h3>
+        <p className="text-xs md:text-sm opacity-80 mb-6">
+          Accede a recursos listos para usar, optimizados para creadores y emprendedores digitales.
+        </p>
+        <a 
+          href="TU_ENLACE_DE_AFILIADO_AQUI" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Ver Producto
+        </a>
+      </div>
+
+      {/* Tarjeta 2 */}
+      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+        <div className="text-3xl mb-4">🚀</div>
+        <h3 className="text-lg font-bold mb-2">Plataforma de Automatización</h3>
+        <p className="text-xs md:text-sm opacity-80 mb-6">
+          La tecnología ideal para escalar procesos y maximizar la captación de clientes en automático.
+        </p>
+        <a 
+          href="TU_ENLACE_DE_AFILIADO_AQUI" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Explorar Herramienta
+        </a>
+      </div>
+
+      {/* Tarjeta 3 */}
+      <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
+        <div className="text-3xl mb-4">💡</div>
+        <h3 className="text-lg font-bold mb-2">Recursos de Formación Pro</h3>
+        <p className="text-xs md:text-sm opacity-80 mb-6">
+          Capacitaciones especializadas para dominar estrategias de monetización y marketing digital.
+        </p>
+        <a 
+          href="TU_ENLACE_DE_AFILIADO_AQUI" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
+        >
+          Conocer Más
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
