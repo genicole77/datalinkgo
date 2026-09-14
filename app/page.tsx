@@ -957,9 +957,6 @@ export default function DatalinkGoApp() {
       >
         Desplegar Kit Seleccionado
       </button>
-    </div>
-  </div>
-</div>
-
+   
 
 
