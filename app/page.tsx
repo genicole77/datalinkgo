@@ -149,12 +149,7 @@ export default function DatalinkGoApp() {
                 </button>
 
                 <button 
-                  onClick={() => { setActiveTab('consultas'); setSidebarOpen(false); }}
-                  className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${activeTab === 'consultas' ? 'bg-red-600 text-white' : darkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'}`}
-                >
-                  <MessageSquare size={18} />
-                  <span>Tarifarios y Consultas</span>
-                </button>
+              
               </nav>
           </aside>
       
