@@ -200,16 +200,7 @@ export default function DatalinkGoApp() {
       </button>
     </form>
   </div>
-</section>
-
-              <nav className="space-y-1">
-                <button 
-                  onClick={() => { setActiveTab('inicio'); setSidebarOpen(false); }}
-                  className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${activeTab === 'inicio' ? 'bg-red-600 text-white' : darkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'}`}
-                >
-                  <Home size={18} />
-                  <span>¿Qué es DataLinkGo?</span>
-                </button>
+</section>         
 
                 <button 
                   onClick={() => { setActiveTab('kits'); setSidebarOpen(false); }}
