@@ -549,12 +549,6 @@ export default function DatalinkGoApp() {
                       Enviar Requerimiento
                     </button>
                   </form>
- </div>
-        </div>
-      </div>
-    </main>
-  </div>
-</div>
 
 {selectedKit && (
   <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
@@ -570,38 +564,6 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 )}
-
-  {selectedKit && (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-      <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative"> 
-  </div>
-</div>
-
-{selectedKit && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative">
-  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative">
-          <X size={20} />
-            </button>
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-red-500/10 text-red-500 border border-red-500/20">
-              Detalle del Producto
-            </span>
-            <h3 className="text-2xl font-black">{selectedKit.title}</h3>
-            <p className="text-xl font-extrabold text-orange-400">{selectedKit.price}</p>
-            <p className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{selectedKit.desc}</p>
-            
-            <div className="space-y-2 pt-2 border-t border-gray-800">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400">Incluye:</h4>
-              <ul className="space-y-2">
-                {selectedKit.features.map((f, i) => (
-                  <li key={i} className="flex items-center space-x-2 text-xs">
-                    <CheckCircle2 size={16} className="text-green-500" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             <div className="pt-4 flex gap-3">
               <a 
