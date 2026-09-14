@@ -38,6 +38,27 @@ export default function DatalinkGoApp() {
 
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-[#0b0f19] text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
+
+<section className="my-12 p-8 bg-gray-900 rounded-2xl border border-gray-800">
+  <h2 className="text-2xl font-bold text-white mb-6">Directorio de Enlaces y Módulos</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="p-6 bg-gray-800 rounded-xl border border-gray-700">
+      <h3 className="text-lg font-bold text-white mb-2">Canales y Contenido</h3>
+      <p className="text-gray-400 text-sm mb-4">Acceso directo a producción de videos, historias y material multimedia.</p>
+      <a href="#canales" className="inline-block bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Ir a Canales</a>
+    </div>
+    <div className="p-6 bg-gray-800 rounded-xl border border-gray-700">
+      <h3 className="text-lg font-bold text-white mb-2">Gestión de Dominios</h3>
+      <p className="text-gray-400 text-sm mb-4">Panel de control de plataformas, enlaces web y configuraciones.</p>
+      <a href="https://namecheap.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-amber-600 hover:bg-amber-500 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Ver Dominios</a>
+    </div>
+    <div className="p-6 bg-gray-800 rounded-xl border border-gray-700">
+      <h3 className="text-lg font-bold text-white mb-2">Plataforma Digital</h3>
+      <p className="text-gray-400 text-sm mb-4">Monitoreo de despliegues, sistemas activos y automatización.</p>
+      <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Abrir Vercel</a>
+    </div>
+  </div>
+</section>
       
       {/* BARRA SUPERIOR */}
       <header className={`sticky top-0 z-40 border-b ${darkMode ? 'bg-[#111827]/90 border-gray-800' : 'bg-white/90 border-gray-200'} backdrop-blur-md`}>
