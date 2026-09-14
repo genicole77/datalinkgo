@@ -132,24 +132,33 @@ export default function DatalinkGoApp() {
   </div>
 </section>
 
-{/* FORMULARIO DE REGISTRO Y CONTROL GLOBAL */}
+{/* FORMULARIO DE REGISTRO Y ACCESO SEGURO */}
 <section className="my-12 p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl border border-gray-700 shadow-2xl">
   <div className="max-w-2xl mx-auto text-center">
-    <h3 className="text-2xl font-bold text-white mb-3">Registro y Control Global de Acceso</h3>
-    <p className="text-gray-300 text-sm mb-6">Regístrate para adaptar los recursos, herramientas y catálogos de monetización a tu región de origen.</p>
+    <h3 className="text-2xl font-bold text-white mb-3">Portal de Acceso y Registro Global</h3>
+    <p className="text-gray-300 text-sm mb-6">Crea tu cuenta con contraseña para operar, comprar y gestionar tus recursos según tu región.</p>
     
     <form onSubmit={(e) => {
       e.preventDefault();
       const name = (document.getElementById('reg-name') as HTMLInputElement)?.value;
       const email = (document.getElementById('reg-email') as HTMLInputElement)?.value;
       const phone = (document.getElementById('reg-phone') as HTMLInputElement)?.value;
+      const password = (document.getElementById('reg-password') as HTMLInputElement)?.value;
       const region = (document.getElementById('reg-region') as HTMLSelectElement)?.value;
       
-      if (!name || !email || !phone) {
-        alert('Por favor, completa los campos obligatorios para procesar tu registro.');
+      if (!name || !email || !phone || !password) {
+        alert('Por favor, completa todos los campos obligatorios, incluyendo la contraseña.');
         return;
       }
-      alert(`¡Registro exitoso, ${name}! Tus datos desde ${region} han sido guardados correctamente para optimizar tu acceso.`);
+      
+      if (password.length < 6) {
+        alert('Por seguridad, la contraseña debe tener al menos 6 caracteres.');
+        return;
+      }
+
+      // Aquí conectaremos con la base de datos y el sistema de envíos de correo
+      console.log({ name, email, phone, region, password });
+      alert(`¡Cuenta creada con éxito, ${name}! Tus credenciales para ${region} han sido registradas. Pronto habilitaremos el envío automático a tu correo.`);
     }} className="space-y-4 text-left">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -169,44 +178,30 @@ export default function DatalinkGoApp() {
           <input id="reg-phone" type="tel" placeholder="+58 o código de tu país" required className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition" />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1">Región / País de Origen</label>
-          <select id="reg-region" className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-500 transition">
-            <option value="Venezuela">Venezuela</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="Colombia">Colombia</option>
-            <option value="España">España</option>
-            <option value="Latinoamérica (Otro)">Latinoamérica (Otro)</option>
-            <option value="Internacional / Global">Internacional / Global</option>
-          </select>
+          <label className="block text-xs font-semibold text-gray-300 mb-1">Contraseña de Acceso</label>
+          <input id="reg-password" type="password" placeholder="Mínimo 6 caracteres" required className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition" />
         </div>
       </div>
 
+      <div>
+        <label className="block text-xs font-semibold text-gray-300 mb-1">Región / País de Operación</label>
+        <select id="reg-region" className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-500 transition">
+          <option value="Venezuela">Venezuela</option>
+          <option value="Estados Unidos">Estados Unidos</option>
+          <option value="Colombia">Colombia</option>
+          <option value="España">España</option>
+          <option value="Latinoamérica (Otro)">Latinoamérica (Otro)</option>
+          <option value="Internacional / Global">Internacional / Global</option>
+        </select>
+      </div>
+
       <button type="submit" className="w-full mt-2 bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl transition duration-200 shadow-lg flex items-center justify-center space-x-2">
-        <span>Completar Registro Global</span>
+        <span>Crear Cuenta y Acceder</span>
         <span>→</span>
       </button>
     </form>
   </div>
-</section>
-      
-      <div className="flex">
-        
-        {/* MENÚ LATERAL */}
-        {sidebarOpen && (
-          <aside className={`w-72 fixed inset-y-0 left-0 z-30 pt-20 pb-6 px-4 border-r flex flex-col justify-between shadow-2xl transition-all duration-300 ${darkMode ? 'bg-[#111827] border-gray-800' : 'bg-white border-gray-200'}`}>
-            <div className="space-y-6">
-              <div className="flex items-center justify-between px-2">
-                <h3 className={`text-xs font-bold uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                  Guía de DataLinkGo
-                </h3>
-                <button onClick={() => setSidebarOpen(false)} className="text-gray-400 hover:text-white">
-                  <X size={18} />
-                </button>
-              </div>
-
-              <p className={`text-xs px-2 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Todo lo que necesitas saber sobre nuestra infraestructura digital, herramientas de afiliación y modelos de consulta automatizados.
-              </p>
+</section>      
 
               <nav className="space-y-1">
                 <button 
