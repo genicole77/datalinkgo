@@ -153,6 +153,7 @@ export default function DatalinkGoApp() {
     </nav>
   </div>
 </aside>
+      
         {/* CONTENIDO PRINCIPAL */}
         <main className={`flex-1 transition-all duration-300 px-4 sm:px-8 py-8 ${sidebarOpen ? 'md:ml-72' : 'ml-0'}`}>
           <div className="max-w-6xl mx-auto space-y-8">
