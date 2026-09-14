@@ -919,22 +919,22 @@ export default function DatalinkGoApp() {
       <option value="automatizacion">Kit de Automatización</option>
       <option value="dominios">Registro de Dominios</option>
     </select>
-    <button
-      type="button"
-      onClick={() => {
-        const emailInput = document.getElementById('user-registration-email') as HTMLInputElement;
-        const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-        if (emailInput && emailInput.value.trim() !== '' && emailInput.value.includes('@')) {
-          alert(`¡Registro exitoso para ${emailInput.value.trim()}! Kit seleccionado: ${kitSelect.value.toUpperCase()}`);
-          emailInput.value = '';
-        } else {
-          alert('Por favor, introduce un correo electrónico válido para completar tu registro.');
-        }
-      }}
-      className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition"
-    >
-      Registrarse en la Plataforma
-    </button>
+  <button
+  type="button"
+  onClick={() => {
+    const emailInput = document.getElementById('user-email-input') as HTMLInputElement;
+    const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+    if (emailInput && emailInput.value.trim() !== '') {
+      alert(`¡Registro exitoso para ${emailInput.value}!`);
+      emailInput.value = '';
+    } else {
+      alert('Por favor, introduce un correo electrónico válido.');
+    }
+  }}
+  className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
+>
+  Registrarse en la Plataforma
+</button> 
   </div>
 </section>
   </div>
