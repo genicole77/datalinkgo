@@ -131,7 +131,6 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 </section>
-
     
 <aside className="w-64 min-h-screen bg-gray-900 border-r border-gray-800 p-4 flex flex-col justify-between">
       
