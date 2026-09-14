@@ -264,7 +264,66 @@ export default function DatalinkGoApp() {
                 </div>
               </div>
             )}
+            
+{/* SECCIÓN FUNCIONAL: AFILIADOS Y MONETIZACIÓN GLOBAL */}
+{activeTab === 'afiliados' && (
+  <div className="space-y-8 animate-fadeIn">
+    <div className="text-center space-y-2">
+      <h2 className="text-3xl font-bold tracking-tight">Plataforma de Afiliados y Monetización</h2>
+      <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-2xl mx-auto`}>
+        Conectamos con las mejores pasarelas, herramientas de infraestructura web y programas globales sin restricciones geográficas.
+      </p>
+    </div>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      {/* Opción 1: Namecheap Partner */}
+      <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} space-y-4`}>
+        <div className="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold text-xl">
+          🌐
+        </div>
+        <h3 className="text-xl font-bold">Infraestructura y Dominios (Namecheap)</h3>
+        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          Recomienda servicios de registro de dominios y seguridad web de nivel global con alta tasa de conversión y pagos seguros.
+        </p>
+        <div className="pt-2">
+          <a 
+            href="https://www.namecheap.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-sm font-bold text-orange-500 hover:text-orange-400"
+          >
+            <span>Ir al Programa Global</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Opción 2: Consultoría y Enlace Directo WhatsApp */}
+      <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} space-y-4`}>
+        <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center font-bold text-xl">
+          💬
+        </div>
+        <h3 className="text-xl font-bold">Asesoría y Alianzas Directas</h3>
+        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          Establece comunicación directa con clientes y socios comerciales a través de canales de mensajería instantánea optimizados.
+        </p>
+        <div className="pt-2">
+          <a 
+            href="https://wa.me/58XXXXXXXXXX?text=Hola,%20quiero%20informacion%20sobre%20alianzas%20y%20afiliaciones%20en%20DataLinkGo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-sm font-bold text-green-500 hover:text-green-400"
+          >
+            <span>Contactar por WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}
           {/* SECCIÓN NUEVA: KITS Y AFILIADOS DIRECTOS */}
 <div className="mt-8">
   <div className="text-center mb-6">
