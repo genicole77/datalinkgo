@@ -557,7 +557,7 @@ export default function DatalinkGoApp() {
         </main>
       </div>
 
-      {/* MODAL DE DETALLES DEL KIT */}
+   
       {selectedKit && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
           <div className={`max-w-md w-full p-6 rounded-3xl border ${darkMode ? 'bg-gray-900 border-gray-800 text-white' : 'bg-white border-gray-200 text-gray-900'} shadow-2xl relative space-y-4`}>
