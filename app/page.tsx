@@ -930,7 +930,7 @@ export default function DatalinkGoApp() {
     } else {
       alert('Por favor, introduce un correo electrónico válido.');
     }
-  }}
+  }
   ClassName="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
 >
   Registrarse en la Plataforma
@@ -942,5 +942,5 @@ export default function DatalinkGoApp() {
 </div>
 </div>
 );
-}
+
 
