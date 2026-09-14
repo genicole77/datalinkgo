@@ -549,7 +549,7 @@ export default function DatalinkGoApp() {
                       Enviar Requerimiento
                     </button>
                   </form>
-  </div>
+ </div>
         </div>
       </div>
     </main>
@@ -569,7 +569,7 @@ export default function DatalinkGoApp() {
       <p className="text-gray-400 text-sm mb-6">{selectedKit.description}</p>
     </div>
   </div>
-)} 
+)}
 
   {selectedKit && (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
