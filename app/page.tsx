@@ -822,3 +822,62 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 </div>
+
+{/* MÓDULO ADICIONAL: VALIDADOR DE ENLACES ACTIVO (AGREGADO LIMPIO) */}
+<div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
+  <div className="space-y-2">
+    <h3 className="text-xl font-bold flex items-center space-x-2">
+      <span>🔗 Validador y Gestor de Enlaces Activos</span>
+    </h3>
+    <p className="text-xs sm:text-sm text-gray-400">
+      Prueba tu enlace de afiliado, pasarela de pago o URL de destino antes de lanzarlo al tráfico masivo.
+    </p>
+  </div>
+
+  <div className="space-y-4">
+    <div>
+      <input 
+        type="url" 
+        placeholder="https://tu-enlace-de-afiliado.com" 
+        id="active-affiliate-url-input"
+        className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
+      />
+    </div>
+
+    <div className="flex flex-wrap gap-4">
+      <button 
+        type="button"
+        onClick={() => {
+          const inputElement = document.getElementById('active-affiliate-url-input') as HTMLInputElement;
+          if (inputElement && inputElement.value.trim() !== '') {
+            let targetUrl = inputElement.value.trim();
+            if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
+              targetUrl = 'https://' + targetUrl;
+            }
+            window.open(targetUrl, '_blank');
+          } else {
+            alert('Por favor, introduce una URL válida (ejemplo: https://tu-sitio.com)');
+          }
+        }}
+        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
+      >
+        <span>Probar Enlace en Vivo</span>
+        <span>→</span>
+      </button>
+
+      <button 
+        type="button"
+        onClick={() => {
+          const inputElement = document.getElementById('active-affiliate-url-input') as HTMLInputElement;
+          if (inputElement) {
+            inputElement.value = '';
+          }
+          alert('Campo limpiado con éxito. Listo para un nuevo enlace.');
+        }}
+        className="border border-gray-700 hover:bg-gray-800 text-gray-300 font-bold px-4 py-3 rounded-xl transition-all text-sm cursor-pointer"
+      >
+        Limpiar
+      </button>
+    </div>
+  </div>
+</div>
