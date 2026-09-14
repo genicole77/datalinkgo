@@ -922,25 +922,24 @@ export default function DatalinkGoApp() {
 <button
   type="button"
   onClick={() => {
-    const emailInput = document.getElementById('user-email-input') as HTMLInputElement;
+    const emailInput = document.getElementById('user-email') as HTMLInputElement;
     const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
     if (emailInput && emailInput.value.trim() !== '') {
-      alert(`¡Registro exitoso para ${emailInput.value}!`);
+      alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
       emailInput.value = '';
     } else {
       alert('Por favor, introduce un correo electrónico válido.');
     }
-  }
-  ClassName="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
+  }}
+  className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
 >
   Registrarse en la Plataforma
 </button>
-
-      </div>
-    </section>
-  </div>
+</div>
+</section>
+</div>
 </div>
 </div>
 );
-
+}
 
