@@ -782,13 +782,13 @@ export default function DatalinkGoApp() {
   </div>
 </section>
 
-{/* MÓDULO NUEVO: ENLACES ACTIVOS DE AFILIADOS (AGREGADO QUIRÚRGICO) */}
-<div className={`my-8 p-6 sm:p-8 rounded-2xl border ${darkMode ? 'bg-gray-900/90 border-gray-800' : 'bg-white border-gray-200'} space-y-6 shadow-xl`}>
+{/* MÓDULO NUEVO: VALIDADOR DE ENLACES SEGURO */}
+<div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
   <div className="space-y-2">
     <h3 className="text-xl font-bold flex items-center space-x-2">
       <span>🔗 Validador de Enlaces Activos</span>
     </h3>
-    <p className={`text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+    <p className="text-xs sm:text-sm text-gray-400">
       Introduce cualquier enlace de afiliado o pasarela para comprobar su redirección de forma inmediata.
     </p>
   </div>
@@ -798,13 +798,14 @@ export default function DatalinkGoApp() {
       <input 
         type="text" 
         placeholder="https://tu-enlace-de-afiliado.com" 
-        className={`w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 ${darkMode ? 'bg-gray-950 border-gray-800 text-gray-100' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+        className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
         id="global-custom-affiliate-input"
       />
     </div>
 
     <div>
       <button 
+        type="button"
         onClick={() => {
           const input = document.getElementById('global-custom-affiliate-input') as HTMLInputElement;
           if (input && input.value) {
@@ -813,7 +814,7 @@ export default function DatalinkGoApp() {
             alert('Por favor, introduce un enlace válido.');
           }
         }}
-        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2"
+        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
       >
         <span>Probar Enlace en Vivo</span>
         <span>→</span>
