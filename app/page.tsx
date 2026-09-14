@@ -954,18 +954,11 @@ export default function DatalinkGoApp() {
           alert(`Has seleccionado el acceso directo al ${selectedValue.toUpperCase()}. Este módulo está listo para desplegar los recursos de tu kit operativo.`);
         }}
         className="border border-gray-700 hover:bg-gray-800 text-gray-300 font-bold px-6 py-3 rounded-xl transition-all text-sm cursor-pointer"
-      >
-   <button
-        type="button"
-        onClick={() => {
-          const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-          const selectedValue = kitSelect.value;
-          alert(`Has seleccionado el acceso directo al ${selectedValue.toUpperCase()}. Este`);
-        }}
-        className="border border-gray-700 hover:bg-gray-800 font-bold px-6 py-3 rounded-xl transition"
+  
       >
         Desplegar Kit Seleccionado
       </button>
     </div>
   </div>
-</div>     
+</div>
+  
