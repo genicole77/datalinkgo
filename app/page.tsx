@@ -954,7 +954,8 @@ export default function DatalinkGoApp() {
       <p className="text-gray-400 text-sm mb-6">{selectedKit.description}</p>
     </div>
   </div>
+</div>
 )}
-  </div>
+</div>
 );
-
+}
