@@ -931,7 +931,7 @@ export default function DatalinkGoApp() {
       alert('Por favor, introduce un correo electrónico válido.');
     }
   }}
-  className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
+  ClassName="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
 >
   Registrarse en la Plataforma
 </button>
