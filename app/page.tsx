@@ -554,14 +554,14 @@ export default function DatalinkGoApp() {
             )}
 
           </div>
-        </main>
-      </div>
+  </div>
+</main>
+</div>
 
-   {selectedKit && (
+{selectedKit && (
   <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
     <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative">
-            <button onClick={() => setSelectedKit(null)} className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white">
-              <X size={20} />
+          <X size={20} />
             </button>
             <span className="px-3 py-1 rounded-full text-xs font-bold bg-red-500/10 text-red-500 border border-red-500/20">
               Detalle del Producto
