@@ -156,7 +156,6 @@ export default function DatalinkGoApp() {
         return;
       }
 
-      // Aquí conectaremos con la base de datos y el sistema de envíos de correo
       console.log({ name, email, phone, region, password });
       alert(`¡Cuenta creada con éxito, ${name}! Tus credenciales para ${region} han sido registradas. Pronto habilitaremos el envío automático a tu correo.`);
     }} className="space-y-4 text-left">
@@ -201,7 +200,7 @@ export default function DatalinkGoApp() {
       </button>
     </form>
   </div>
-</section>      
+</section>
 
               <nav className="space-y-1">
                 <button 
