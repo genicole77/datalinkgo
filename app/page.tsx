@@ -131,9 +131,7 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 </section>
-    
-<aside className="w-64 min-h-screen bg-gray-900 border-r border-gray-800 p-4 flex flex-col justify-between">
-      
+         
                 <button 
                   onClick={() => { setActiveTab('kits'); setSidebarOpen(false); }}
                   className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${activeTab === 'kits' ? 'bg-red-600 text-white' : darkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'}`}
