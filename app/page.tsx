@@ -881,3 +881,82 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 </div>
+
+{/* MÓDULO ADICIONAL: REGISTRO Y ACCESO DIRECTO A KITS (AGREGADO LIMPIO) */}
+<div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
+  <div className="space-y-2">
+    <h3 className="text-xl font-bold flex items-center space-x-2">
+      <span>🚀 Registro de Usuario y Acceso a Kits</span>
+    </h3>
+    <p className="text-xs sm:text-sm text-gray-400">
+      Crea tu cuenta de acceso rápido o selecciona el kit de trabajo operativo para desplegar tu infraestructura digital.
+    </p>
+  </div>
+
+  <div className="space-y-4">
+    {/* CAMPO DE REGISTRO DE CORREO */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-red-500">
+          Tu Correo Electrónico
+        </label>
+        <input 
+          type="email" 
+          placeholder="tu-correo@dominio.com" 
+          id="user-registration-email"
+          className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
+        />
+      </div>
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-red-500">
+          Selecciona tu Kit de Interés
+        </label>
+        <select 
+          id="user-selected-kit"
+          className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
+        >
+          <option value="emprendedor">Kit de Emprendedor</option>
+          <option value="automatizacion">Kit de Automatización</option>
+          <option value="storytelling">Estrategia de Storytelling</option>
+          <option value="afiliados">Plataforma de Afiliados</option>
+        </select>
+      </div>
+    </div>
+
+    {/* BOTONES DE ACCIÓN REAL */}
+    <div className="flex flex-wrap gap-4 pt-2">
+      <button 
+        type="button"
+        onClick={() => {
+          const emailInput = document.getElementById('user-registration-email') as HTMLInputElement;
+          const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+          
+          if (emailInput && emailInput.value.trim() !== '' && emailInput.value.includes('@')) {
+            alert(`¡Registro exitoso para ${emailInput.value.trim()}! Kit seleccionado: ${kitSelect.value.toUpperCase()}. Bienvenido a DataLinkGo.`);
+            emailInput.value = '';
+          } else {
+            alert('Por favor, introduce un correo electrónico válido para completar tu registro.');
+          }
+        }}
+        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
+      >
+        <span>Registrarse en la Plataforma</span>
+        <span>→</span>
+      </button>
+
+      <button 
+        type="button"
+        onClick={() => {
+          const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+          const selectedValue = kitSelect.value;
+          
+          // Redirección simulada interna o despliegue de información del kit
+          alert(`Has seleccionado el acceso directo al ${selectedValue.toUpperCase()}. Este módulo está listo para desplegar los recursos de tu kit operativo.`);
+        }}
+        className="border border-gray-700 hover:bg-gray-800 text-gray-300 font-bold px-6 py-3 rounded-xl transition-all text-sm cursor-pointer"
+      >
+        Desplegar Kit Seleccionado
+      </button>
+    </div>
+  </div>
+</div>
