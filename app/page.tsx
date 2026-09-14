@@ -592,8 +592,7 @@ export default function DatalinkGoApp() {
       </a>
 
     </div>
-  );
-}
+
 {/* SECCIÓN DE AFILIADOS Y PRODUCTOS RECOMENDADOS */}
 <section className="py-12 px-6 bg-gray-900 text-white">
   <div className="max-w-6xl mx-auto">
