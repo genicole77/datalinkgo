@@ -937,8 +937,5 @@ export default function DatalinkGoApp() {
 </button>
 </div>
 </section>
-</div>
-</div>
-</div>
 );
 }
