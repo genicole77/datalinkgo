@@ -138,17 +138,16 @@ export default function DatalinkGoApp() {
     >
       <Share2 size={18} />
       <span>Plataforma de Afiliados</span>
-    </button>              
-
- <button
-      onClick={() => setActiveTab('creadores')}
+    </button>
+    <button
+      onClick={() => { setActiveTab('creadores'); setSidebarOpen(false); }}
       className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 text-gray-300 hover:bg-gray-800/60 hover:text-white"
     >
       <Video size={18} />
       <span>Creadores y Publicidad</span>
     </button>
   </nav>
-</aside>           
+</aside>    
       
         {/* CONTENIDO PRINCIPAL */}
         <main className={`flex-1 transition-all duration-300 px-4 sm:px-8 py-8 ${sidebarOpen ? 'md:ml-72' : 'ml-0'}`}>
