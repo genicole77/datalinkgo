@@ -549,12 +549,15 @@ export default function DatalinkGoApp() {
                       Enviar Requerimiento
                     </button>
                   </form>
-                </div>
-              </div>
-     </div>
         </div>
-      </div>
-    </main>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  {selectedKit && (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+      <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative"> 
   </div>
 </div>
 
