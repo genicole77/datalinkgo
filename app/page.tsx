@@ -132,13 +132,7 @@ export default function DatalinkGoApp() {
   </div>
 </section>
                    
-                <button 
-                  onClick={() => { setActiveTab('afiliados'); setSidebarOpen(false); }}
-                  className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${activeTab === 'afiliados' ? 'bg-red-600 text-white' : darkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'}`}
-                >
-                  <Share2 size={18} />
-                  <span>Plataforma de Afiliados</span>
-                </button>
+              
 
  <button
       onClick={() => setActiveTab('creadores')}
