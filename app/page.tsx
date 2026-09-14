@@ -156,8 +156,6 @@ export default function DatalinkGoApp() {
                   <span>Tarifarios y Consultas</span>
                 </button>
               </nav>
-         
-            </div>
           </aside>
       
         {/* CONTENIDO PRINCIPAL */}
