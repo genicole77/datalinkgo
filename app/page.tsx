@@ -157,8 +157,6 @@ export default function DatalinkGoApp() {
                 </button>
               </nav>
          
-            <div className={`p-3 rounded-xl border ${darkMode ? 'bg-gray-900 border-gray-800 text-gray-400' : 'bg-gray-50 border-gray-200 text-gray-600'} text-xs text-center`}>
-              DataLinkGo v2.5 — Todos los derechos reservados.
             </div>
           </aside>
       
