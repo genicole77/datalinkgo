@@ -935,10 +935,9 @@ export default function DatalinkGoApp() {
 >
   Registrarse en la Plataforma
 </button>
-          </div>
-        </div>
-      </section>
-    </div>
+
+      </div>
+    </section>
   </div>
 </div>
 
@@ -956,4 +955,3 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 )}
-  
