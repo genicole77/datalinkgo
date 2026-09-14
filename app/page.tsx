@@ -935,7 +935,6 @@ export default function DatalinkGoApp() {
 >
   Registrarse en la Plataforma
 </button>
-</div>
 </section>
 );
 }
