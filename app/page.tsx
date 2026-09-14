@@ -324,6 +324,67 @@ export default function DatalinkGoApp() {
     </div>
   </div>
 )}
+
+       {/* SECCIÓN FUNCIONAL: CREADORES Y PUBLICIDAD */}
+{activeTab === 'creadores' && (
+  <div className="space-y-8 animate-fadeIn pt-6">
+    <div className="text-center space-y-2">
+      <h2 className="text-3xl font-bold tracking-tight">Creadores y Publicidad Digital</h2>
+      <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} max-w-2xl mx-auto`}>
+        Recursos para la producción de contenido, estrategias de video, storytelling y gestión de audiencias.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      {/* Opción 1: Estrategias de Video */}
+      <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} space-y-4`}>
+        <div className="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold text-xl">
+          🎬
+        </div>
+        <h3 className="text-xl font-bold">Estrategias de Storytelling y Video</h3>
+        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          Optimización para plataformas de contenido, retención de audiencias y producción enfocada en impacto digital.
+        </p>
+        <div className="pt-2">
+          <a 
+            href="https://wa.me/58XXXXXXXXXX?text=Hola,%20quiero%20asesoria%20para%20creadores%20de%20contenido%20en%20DataLinkGo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-sm font-bold text-red-500 hover:text-red-400"
+          >
+            <span>Consultar Estrategia</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Opción 2: Gestión Publicitaria */}
+      <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-gray-900/80 border-gray-800' : 'bg-white border-gray-200'} space-y-4`}>
+        <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center font-bold text-xl">
+          📈
+        </div>
+        <h3 className="text-xl font-bold">Gestión Publicitaria</h3>
+        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          Canales de distribución, optimización de tráfico y automatizaciones orientadas a proyectos de creadores.
+        </p>
+        <div className="pt-2">
+          <a 
+            href="https://wa.me/58XXXXXXXXXX?text=Hola,%20quiero%20saber%20sobre%20gestion%20publicitaria%20y%20canales" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-sm font-bold text-purple-500 hover:text-purple-400"
+          >
+            <span>Conectar Canal</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}     
+            
           {/* SECCIÓN NUEVA: KITS Y AFILIADOS DIRECTOS */}
 <div className="mt-8">
   <div className="text-center mb-6">
