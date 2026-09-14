@@ -130,19 +130,29 @@ export default function DatalinkGoApp() {
       <a href="https://datalinkgo.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-lg text-sm transition">Abrir Plataforma</a>
     </div>
   </div>
-</section>
-                   
-<button onClick={() => { setActiveTab('afiliados'); setSidebarOpen(false); }} className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 text-gray-300 hover:bg-gray-800/60 hover:text-white">
-      <Share2 size={18} />
-      <span>Plataforma de Afiliados</span>
-    </button>
-    <button onClick={() => { setActiveTab('creadores'); setSidebarOpen(false); }} className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 text-gray-300 hover:bg-gray-800/60 hover:text-white">
-      <Video size={18} />
-      <span>Creadores y Publicidad</span>
-    </button>
-  </nav>
-</aside>
+ </section>
+
+<aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 border-r border-gray-800 transition-transform duration-300 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+  <div className="h-full flex flex-col">
+    <div className="h-16 flex items-center justify-between px-6 border-b border-gray-800">
+      <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">DatalinkGo</span>
+      <button onClick={() => setSidebarOpen(false)} className="lg:hidden text-gray-400 hover:text-white">
+        <X size={24} />
+      </button>
+    </div>
     
+    <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+      <button onClick={() => { setActiveTab('afiliados'); setSidebarOpen(false); }} className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 text-gray-300 hover:bg-gray-800/60 hover:text-white">
+        <Share2 size={18} />
+        <span>Plataforma de Afiliados</span>
+      </button>
+      <button onClick={() => { setActiveTab('creadores'); setSidebarOpen(false); }} className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 text-gray-300 hover:bg-gray-800/60 hover:text-white">
+        <Video size={18} />
+        <span>Creadores y Publicidad</span>
+      </button>
+    </nav>
+  </div>
+</aside>
         {/* CONTENIDO PRINCIPAL */}
         <main className={`flex-1 transition-all duration-300 px-4 sm:px-8 py-8 ${sidebarOpen ? 'md:ml-72' : 'ml-0'}`}>
           <div className="max-w-6xl mx-auto space-y-8">
