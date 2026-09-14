@@ -549,11 +549,27 @@ export default function DatalinkGoApp() {
                       Enviar Requerimiento
                     </button>
                   </form>
+  </div>
         </div>
-        </div>
-      </main>
+      </div>
+    </main>
+  </div>
+</div>
+
+{selectedKit && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div className="max-w-md w-full p-6 bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl relative">
+      <button onClick={() => setSelectedKit(null)} className="absolute top-4 right-4 text-gray-400 hover:text-white">
+        <X size={20} />
+      </button>
+      <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+        Detalle del Producto
+      </span>
+      <h3 className="text-2xl font-bold text-white mt-3 mb-1">{selectedKit.title}</h3>
+      <p className="text-gray-400 text-sm mb-6">{selectedKit.description}</p>
     </div>
   </div>
+)} 
 
   {selectedKit && (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
