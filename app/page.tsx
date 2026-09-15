@@ -742,66 +742,51 @@ export default function DatalinkGoApp() {
 {/* MÓDULO NUEVO: VALIDADOR DE ENLACES SEGURO */}
 <div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
   <div className="space-y-2">
-    <h3 className="text-xl font-bold flex items-center space-x-2">
-      <span>🔗 Validador de Enlaces Activos</span>
-    </h3>
-    <p className="text-xs sm:text-sm text-gray-400">
-      Introduce cualquier enlace de afiliado o pasarela para comprobar su redirección de forma inmediata.
-    </p>
-  </div>
-
-  <div className="space-y-4">
-    <div>
-      <input 
-        type="text" 
-        placeholder="https://tu-enlace-de-afiliado.com" 
-        className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
+  className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none"
         id="global-custom-affiliate-input"
-   <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
-                <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
+      />
 
-                <div className="space-y-4">
-                  <input
-                    id="user-email"
-                    type="email"
-                    placeholder="tu@correo.com"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
-                  />
+      <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+        <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
+        <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
-                  <select
-                    id="user-selected-kit"
-                    className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-red-500"
-                  >
-                    <option value="emprendedor">Kit Emprendedor Pro</option>
-                    <option value="automatizacion">Kit de Automatización</option>
-                    <option value="dominios">Registro de Dominios</option>
-                  </select>
+        <div className="space-y-4">
+          <input
+            id="user-email"
+            type="email"
+            placeholder="tu@correo.com"
+            className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+          />
 
-                  <div className="pt-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const emailInput = document.getElementById('user-email') as HTMLInputElement;
-                        const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-                        if (emailInput && emailInput.value.trim() !== '') {
-                          alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
-                          emailInput.value = '';
-                        } else {
-                          alert('Por favor, introduce un correo electrónico válido.');
-                        }
-                      }}
-                      className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
-                    >
-                      Registrarse en la Plataforma
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <select
+            id="user-selected-kit"
+            className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-red-500"
+          >
+            <option value="emprendedor">Kit Emprendedor Pro</option>
+            <option value="automatizacion">Kit de Automatización</option>
+            <option value="dominios">Registro de Dominios</option>
+          </select>
+
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => {
+                const emailInput = document.getElementById('user-email') as HTMLInputElement;
+                const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+                if (emailInput && emailInput.value.trim() !== '') {
+                  alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
+                  emailInput.value = '';
+                } else {
+                  alert('Por favor, introduce un correo electrónico válido.');
+                }
+              }}
+              className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
+            >
+              Registrarse en la Plataforma
+            </button>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </div>
-}
+</section>
