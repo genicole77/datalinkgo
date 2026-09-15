@@ -877,30 +877,18 @@ export default function DatalinkGoApp() {
           <option value="storytelling">Estrategia de Storytelling</option>
           <option value="afiliados">Plataforma de Afiliados</option>
         </select>
-      </div>
-    </div>
-
-    {/* BOTONES DE ACCIÓN REAL */}
-    <div className="flex flex-wrap gap-4 pt-2">
-      <button 
-        type="button"
-        onClick={() => {
-          const emailInput = document.getElementById('user-registration-email') as HTMLInputElement;
-          const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
   <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
             <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
             <div className="space-y-4">
               <input
-                id="user-email"
                 type="email"
                 placeholder="tu@correo.com"
                 className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
               />
 
               <select
-                id="user-selected-kit"
                 className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-red-500"
               >
                 <option value="emprendedor">Kit Emprendedor Pro</option>
@@ -910,16 +898,7 @@ export default function DatalinkGoApp() {
 
               <button
                 type="button"
-                onClick={() => {
-                  const emailInput = document.getElementById('user-email') as HTMLInputElement;
-                  const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-                  if (emailInput && emailInput.value.trim() !== '') {
-                    alert('Registro exitoso para: ' + emailInput.value);
-                    emailInput.value = '';
-                  } else {
-                    alert('Por favor, introduce un correo electronico valido.');
-                  }
-                }}
+                onClick={() => alert('¡Gracias por registrarte!')}
                 className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
               >
                 Registrarse en la Plataforma
