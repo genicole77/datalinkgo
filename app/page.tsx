@@ -867,17 +867,7 @@ export default function DatalinkGoApp() {
       <div>
         <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-red-500">
           Selecciona tu Kit de Interés
-        </label>
-        <select 
-          id="user-selected-kit"
-          className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
-        >
-          <option value="emprendedor">Kit de Emprendedor</option>
-          <option value="automatizacion">Kit de Automatización</option>
-          <option value="storytelling">Estrategia de Storytelling</option>
-          <option value="afiliados">Plataforma de Afiliados</option>
-        </select>
-  <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+   <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
             <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
@@ -905,7 +895,7 @@ export default function DatalinkGoApp() {
               </button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
