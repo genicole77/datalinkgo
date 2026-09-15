@@ -795,38 +795,46 @@ export default function DatalinkGoApp() {
     <div>
       <input 
         type="url" 
-        placeholder="https://tu-enlace-de-afiliado.com" 
-        id="active-affiliate-url-input"
-     <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-            <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
-            <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
-
-            <div className="space-y-4">
-              <input
-                type="email"
-                placeholder="tu@correo.com"
-                className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+       <input
+                type="text"
+                placeholder="https://tu-enlace-de-afiliado.com"
+                id="active-affiliate-url-input"
+                className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500 mb-4"
               />
 
-              <select
-                className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-red-500"
-              >
-                <option value="emprendedor">Kit Emprendedor Pro</option>
-                <option value="automatizacion">Kit de Automatización</option>
-                <option value="dominios">Registro de Dominios</option>
-              </select>
+              <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+                <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
+                <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
-              <button
-                type="button"
-                onClick={() => alert('¡Gracias por registrarte!')}
-                className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
-              >
-                Registrarse en la Plataforma
-              </button>
+                <div className="space-y-4">
+                  <input
+                    type="email"
+                    placeholder="tu@correo.com"
+                    className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+                  />
+
+                  <select
+                    className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-red-500"
+                  >
+                    <option value="emprendedor">Kit Emprendedor Pro</option>
+                    <option value="automatizacion">Kit de Automatización</option>
+                    <option value="dominios">Registro de Dominios</option>
+                  </select>
+
+                  <button
+                    type="button"
+                    onClick={() => alert('¡Gracias por registrarte!')}
+                    className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
+                  >
+                    Registrarse en la Plataforma
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </main>
-  );
+    </div>
+  </main>
+    );
 }
