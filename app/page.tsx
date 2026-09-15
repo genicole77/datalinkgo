@@ -897,44 +897,26 @@ export default function DatalinkGoApp() {
         }}
         className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
       >
-        <span>Registrarse en la Plataforma</span>
-        <span>→</span>
-      </button>
-      
-<section className="my-12 p-8 bg-gray-900 rounded-2xl border border-gray-800 text-center">
-  <h3 className="text-2xl font-bold text-white mb-4">Registro y Selección de Kits</h3>
-  <p className="text-gray-400 mb-6">Introduce tu correo y selecciona tu acceso directo:</p>
-  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <input 
-      id="user-registration-email" 
-      type="email" 
-      placeholder="Tu correo electrónico" 
-      className="px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white w-full sm:w-72" 
-    />
-    <select 
-      id="user-selected-kit" 
-      className="px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white"
-    >
-      <option value="emprendedor">Kit Emprendedor Pro</option>
-      <option value="automatizacion">Kit de Automatización</option>
-      <option value="dominios">Registro de Dominios</option>
-    </select>
-<button
-  type="button"
-  onClick={() => {
-    const emailInput = document.getElementById('user-email') as HTMLInputElement;
-    const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-    if (emailInput && emailInput.value.trim() !== '') {
-      alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
-      emailInput.value = '';
-    } else {
-      alert('Por favor, introduce un correo electrónico válido.');
-    }
-  }}
-  className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
->
-  Registrarse en la Plataforma
-</button>
-</section>
-);
-}
+ <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => {
+                const emailInput = document.getElementById('user-email') as HTMLInputElement;
+                const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+                if (emailInput && emailInput.value.trim() !== '') {
+                  alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
+                  emailInput.value = '';
+                } else {
+                  alert('Por favor, introduce un correo electrónico válido.');
+                }
+              }}
+              className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
+            >
+              Registrarse en la Plataforma
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}   
