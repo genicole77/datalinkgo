@@ -792,10 +792,7 @@ export default function DatalinkGoApp() {
   </div>
 
   <div className="space-y-4">
-    <div>
-      <input 
-        type="url" 
-       <input
+<input
                 type="text"
                 placeholder="https://tu-enlace-de-afiliado.com"
                 id="active-affiliate-url-input"
