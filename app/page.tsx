@@ -40,16 +40,39 @@ export default function GlobalECommercePlatform() {
     setUserPhone('');
   };
 
-  const handleServiceSubmit = (e: React.FormEvent) => {
+  const handleServiceSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!serviceEmail.trim() || !serviceDetails.trim()) {
       alert('Por favor completa tu correo y los detalles del servicio.');
       return;
     }
-    alert('¡Solicitud de servicio enviada con éxito! Un especialista se pondrá en contacto contigo a la brevedad.');
-    setServiceName('');
-    setServiceEmail('');
-    setServiceDetails('');
+
+    try {
+      const response = await fetch('/api/send-service', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: serviceName || 'Cliente General',
+          email: serviceEmail,
+          category: serviceCategory,
+          details: serviceDetails,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('¡Solicitud enviada con éxito! Se ha enviado un correo de confirmación al cliente y una notificación al equipo de la plataforma.');
+        setServiceName('');
+        setServiceEmail('');
+        setServiceDetails('');
+      } else {
+        alert('Error al procesar la solicitud: ' + (data.error || 'Inténtalo de nuevo.'));
+      }
+    } catch (error) {
+      console.error('Error de red:', error);
+      alert('Error de conexión con el servidor de correo.');
+    }
   };
 
   const handleAdSubmit = (e: React.FormEvent) => {
