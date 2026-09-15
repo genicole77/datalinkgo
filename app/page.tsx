@@ -597,20 +597,53 @@ export default function GlobalECommercePlatform() {
   </div>
 </section>
 
-{/* Sección de Registro de Productos para Proveedores y Creadores */}
+{/* Sección de Registro de Productos para Proveedores y Creadores con Lista en Vivo */}
 <section className="py-12 px-4 max-w-4xl mx-auto border-t border-gray-800 mt-12">
   <div className="text-center mb-8">
     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Publica tu Producto en DataLinkGo</h2>
     <p className="text-gray-400 text-sm md:text-base">¿Eres fabricante, creador de contenido o distribuidor? Sube tus productos o cursos a nuestra plataforma.</p>
   </div>
 
-  <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl">
-    <form onSubmit={(e) => { e.preventDefault(); alert('¡Producto enviado con éxito para revisión de DataLinkGo!'); }} className="space-y-6">
+  <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl mb-8">
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      const form = e.currentTarget as HTMLFormElement;
+      const nameInput = form.elements.namedItem('productName') as HTMLInputElement;
+      const typeSelect = form.elements.namedItem('productType') as HTMLSelectElement;
+      const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
+
+      const newProduct = {
+        name: nameInput.value,
+        type: typeSelect.value,
+        desc: descInput.value,
+        date: new Date().toLocaleDateString()
+      };
+
+      // Guardar en la lista visual temporal de la página
+      const listContainer = document.getElementById('live-products-list');
+      if (listContainer) {
+        const item = document.createElement('div');
+        item.className = 'bg-gray-950 border border-gray-800 p-4 rounded-xl mb-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-2';
+        item.innerHTML = `
+          <div>
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-2.5 py-1 rounded-full font-medium">${newProduct.type}</span>
+            <h4 class="text-white font-bold text-lg mt-2">${newProduct.name}</h4>
+            <p class="text-gray-400 text-sm">${newProduct.desc}</p>
+          </div>
+          <span class="text-xs text-gray-500">Enviado: ${newProduct.date}</span>
+        `;
+        listContainer.prepend(item);
+      }
+
+      alert('¡Producto enviado con éxito y agregado al catálogo en revisión!');
+      form.reset();
+    }} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Nombre del Producto o Creador</label>
           <input 
             type="text" 
+            name="productName"
             required 
             placeholder="Ej: Perfume Original / Curso Digital" 
             className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
@@ -618,7 +651,7 @@ export default function GlobalECommercePlatform() {
         </div>
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Tipo de Producto</label>
-          <select className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm">
+          <select name="productType" className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm">
             <option>Producto Físico (Envíos / Inventario)</option>
             <option>Infoproducto / Curso Digital (Hotmart)</option>
             <option>E-book / Recurso Descargable</option>
@@ -629,6 +662,7 @@ export default function GlobalECommercePlatform() {
       <div>
         <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Descripción y Detalles de Envíos / Stock</label>
         <textarea 
+          name="productDesc"
           rows={3} 
           required 
           placeholder="Indica de dónde se despacha (ej: stock en EE.UU. para Latinoamérica) o detalles del curso..." 
@@ -643,6 +677,17 @@ export default function GlobalECommercePlatform() {
         Enviar Producto al Marketplace
       </button>
     </form>
+  </div>
+
+  {/* Contenedor de Productos Registrados en Vivo */}
+  <div className="mt-8">
+    <h3 className="text-xl font-bold text-white mb-4">Catálogo en Validación y Nuevos Ingresos</h3>
+    <div id="live-products-list" className="space-y-3">
+      {/* Aquí aparecerán los productos que vayas enviando */}
+      <div className="bg-gray-950 border border-gray-800 p-4 rounded-xl text-gray-500 text-sm text-center">
+        Aún no hay productos enviados en esta sesión. ¡Prueba llenando el formulario arriba!
+      </div>
+    </div>
   </div>
 </section>
       
