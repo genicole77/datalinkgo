@@ -597,47 +597,131 @@ export default function GlobalECommercePlatform() {
   </div>
 </section>
 
-{/* Sección de Registro de Productos para Proveedores y Creadores con Lista en Vivo */}
-<section className="py-12 px-4 max-w-4xl mx-auto border-t border-gray-800 mt-12">
-  <div className="text-center mb-8">
-    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Publica tu Producto en DataLinkGo</h2>
-    <p className="text-gray-400 text-sm md:text-base">¿Eres fabricante, creador de contenido o distribuidor? Sube tus productos o cursos a nuestra plataforma.</p>
+{/* Sección Maestra del Marketplace: Registro B2B, Mayor/Detal, Multimedia y Monetización */}
+<section className="py-12 px-4 max-w-5xl mx-auto border-t border-gray-800 mt-12">
+  <div className="text-center mb-10">
+    <span className="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">DataLinkGo Marketplace & Hub</span>
+    <h2 className="text-2xl md:text-4xl font-bold text-white mt-3 mb-2">Publica tu Producto, Curso o Inventario</h2>
+    <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">Conectamos fabricantes, importadores y creadores con compradores globales y mayoristas. Gestionamos transacciones seguras con comisiones transparentes.</p>
   </div>
 
-  <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl mb-8">
+  {/* Tarjetas de Opciones de Monetización / Planes para Proveedores */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+      <div>
+        <h3 className="text-white font-bold text-lg mb-1">Plan Estándar</h3>
+        <p className="text-blue-400 font-semibold text-2xl mb-3">Gratis</p>
+        <p className="text-gray-400 text-sm mb-4">Ideal para creadores independientes o pruebas de productos individuales.</p>
+        <ul className="text-gray-300 text-xs space-y-2 mb-6">
+          <li>✓ 1 Producto o curso activo</li>
+          <li>✓ Formato Detal y Multimedia</li>
+          <li>✓ Comisión estándar por venta</li>
+        </ul>
+      </div>
+      <span className="text-xs text-gray-500 text-center font-medium">Activo por defecto</span>
+    </div>
+
+    <div className="bg-gradient-to-b from-blue-950/40 to-gray-900 border border-blue-500/50 p-6 rounded-2xl flex flex-col justify-between relative shadow-xl">
+      <div className="absolute -top-3 right-4 bg-blue-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">Más Popular</div>
+      <div>
+        <h3 className="text-white font-bold text-lg mb-1">Fábrica / Mayorista B2B</h3>
+        <p className="text-blue-400 font-semibold text-2xl mb-3">$29 <span className="text-xs text-gray-400 font-normal">/ mes</span></p>
+        <p className="text-gray-400 text-sm mb-4">Diseñado para distribuidores con inventario físico (ej: stock en EE.UU.).</p>
+        <ul className="text-gray-300 text-xs space-y-2 mb-6">
+          <li>✓ Precios Mayor y Detal habilitados</li>
+          <li>✓ Inventario masivo y videos ilimitados</li>
+          <li>✓ Menor comisión por transacción</li>
+        </ul>
+      </div>
+      <a href="#registro-form" className="bg-blue-600 hover:bg-blue-500 text-white text-center font-medium py-2 rounded-lg text-xs transition-colors">Seleccionar Plan</a>
+    </div>
+
+    <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+      <div>
+        <h3 className="text-white font-bold text-lg mb-1">Patrocinio Destacado</h3>
+        <p className="text-blue-400 font-semibold text-2xl mb-3">$15 <span className="text-xs text-gray-400 font-normal">/ semana</span></p>
+        <p className="text-gray-400 text-sm mb-4">Posiciona tus productos o cursos en el primer lugar del Catálogo Global.</p>
+        <ul className="text-gray-300 text-xs space-y-2 mb-6">
+          <li>✓ Máxima visibilidad en portada</li>
+          <li>✓ Prioridad en validación</li>
+          <li>✓ Reporte directo de clics</li>
+        </ul>
+      </div>
+      <a href="#registro-form" className="bg-gray-800 hover:bg-gray-700 text-white text-center font-medium py-2 rounded-lg text-xs transition-colors">Destacar Producto</a>
+    </div>
+  </div>
+
+  {/* Formulario Principal de Registro con Mayor/Detal y Multimedia */}
+  <div id="registro-form" className="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-2xl mb-12">
+    <h3 className="text-xl font-bold text-white mb-6">Formulario de Alta de Producto o Inventario</h3>
     <form onSubmit={(e) => {
       e.preventDefault();
       const form = e.currentTarget as HTMLFormElement;
       const nameInput = form.elements.namedItem('productName') as HTMLInputElement;
       const typeSelect = form.elements.namedItem('productType') as HTMLSelectElement;
+      const retailPrice = form.elements.namedItem('retailPrice') as HTMLInputElement;
+      const wholesalePrice = form.elements.namedItem('wholesalePrice') as HTMLInputElement;
+      const minWholesale = form.elements.namedItem('minWholesale') as HTMLInputElement;
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
+      const fileInput = form.elements.namedItem('productFile') as HTMLInputElement;
+
+      let mediaHtml = '';
+      if (fileInput.files && fileInput.files[0]) {
+        const file = fileInput.files[0];
+        const fileUrl = URL.createObjectURL(file);
+        if (file.type.startsWith('video/')) {
+          mediaHtml = `<video src="${fileUrl}" controls class="w-full h-52 object-cover rounded-xl mt-4"></video>`;
+        } else {
+          mediaHtml = `<img src="${fileUrl}" alt="Media del producto" class="w-full h-52 object-cover rounded-xl mt-4" />`;
+        }
+      }
 
       const newProduct = {
         name: nameInput.value,
         type: typeSelect.value,
+        retail: retailPrice.value,
+        wholesale: wholesalePrice.value || 'N/D',
+        minW: minWholesale.value || '1',
         desc: descInput.value,
+        media: mediaHtml,
         date: new Date().toLocaleDateString()
       };
 
-      // Guardar en la lista visual temporal de la página
       const listContainer = document.getElementById('live-products-list');
       if (listContainer) {
+        const emptyMsg = document.getElementById('empty-catalog-message');
+        if (emptyMsg) emptyMsg.remove();
+
         const item = document.createElement('div');
-        item.className = 'bg-gray-950 border border-gray-800 p-4 rounded-xl mb-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-2';
+        item.className = 'bg-gray-950 border border-gray-800 p-6 rounded-2xl shadow-xl transition-all';
         item.innerHTML = `
-          <div>
-            <span class="bg-blue-600/20 text-blue-400 text-xs px-2.5 py-1 rounded-full font-medium">${newProduct.type}</span>
-            <h4 class="text-white font-bold text-lg mt-2">${newProduct.name}</h4>
-            <p class="text-gray-400 text-sm">${newProduct.desc}</p>
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-3">
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full font-semibold">${newProduct.type}</span>
+            <span class="text-xs text-gray-500">Registrado: ${newProduct.date}</span>
           </div>
-          <span class="text-xs text-gray-500">Enviado: ${newProduct.date}</span>
+          <h4 class="text-white font-bold text-xl mb-2">${newProduct.name}</h4>
+          <p class="text-gray-300 text-sm mb-4 leading-relaxed">${newProduct.desc}</p>
+          
+          <div class="grid grid-cols-2 gap-4 bg-gray-900 p-4 rounded-xl mb-4 border border-gray-800/60">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400 block font-medium">Precio al Detal</span>
+              <span class="text-white font-bold text-lg">$${newProduct.retail}</span>
+            </div>
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-gray-400 block font-medium">Precio al Mayor (Min: ${newProduct.minW})</span>
+              <span class="text-blue-400 font-bold text-lg">$${newProduct.wholesale}</span>
+            </div>
+          </div>
+
+          ${newProduct.media}
         `;
         listContainer.prepend(item);
       }
 
-      alert('¡Producto enviado con éxito y agregado al catálogo en revisión!');
+      alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
       form.reset();
     }} className="space-y-6">
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Nombre del Producto o Creador</label>
@@ -645,52 +729,95 @@ export default function GlobalECommercePlatform() {
             type="text" 
             name="productName"
             required 
-            placeholder="Ej: Perfume Original / Curso Digital" 
+            placeholder="Ej: Lote de Perfumes / Curso de Trading" 
             className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Tipo de Producto</label>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Tipo de Negocio / Producto</label>
           <select name="productType" className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm">
-            <option>Producto Físico (Envíos / Inventario)</option>
+            <option>Producto Físico - Stock Mayorista (B2B)</option>
+            <option>Producto Físico - Venta Minorista (Detal)</option>
             <option>Infoproducto / Curso Digital (Hotmart)</option>
             <option>E-book / Recurso Descargable</option>
           </select>
         </div>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Precio al Detal ($)</label>
+          <input 
+            type="number" 
+            step="0.01" 
+            name="retailPrice"
+            required 
+            placeholder="Ej: 49.99" 
+            className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Precio al Mayor ($)</label>
+          <input 
+            type="number" 
+            step="0.01" 
+            name="wholesalePrice"
+            placeholder="Ej: 35.00 (Opcional)" 
+            className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Cant. Mínima Mayorista</label>
+          <input 
+            type="number" 
+            name="minWholesale"
+            placeholder="Ej: 10 unidades" 
+            className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
+          />
+        </div>
+      </div>
+
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Descripción y Detalles de Envíos / Stock</label>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Descripción y Logística de Envíos</label>
         <textarea 
           name="productDesc"
           rows={3} 
           required 
-          placeholder="Indica de dónde se despacha (ej: stock en EE.UU. para Latinoamérica) o detalles del curso..." 
+          placeholder="Indica origen del stock (ej: despacho desde EE.UU.), tiempos de entrega o características principales..." 
           className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm resize-none"
         ></textarea>
       </div>
 
+      <div>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Multimedia (Foto del Producto o Video de Presentación)</label>
+        <input 
+          type="file" 
+          name="productFile"
+          accept="image/*,video/*"
+          className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-gray-400 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500 cursor-pointer"
+        />
+        <p className="text-xs text-gray-500 mt-1">Sube una imagen clara o un video corto (MP4) para la vitrina del marketplace.</p>
+      </div>
+
       <button 
         type="submit" 
-        className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-lg transition-colors text-sm shadow-lg"
+        className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3.5 rounded-lg transition-colors text-sm shadow-xl"
       >
-        Enviar Producto al Marketplace
+        Publicar en el Catálogo Global de DataLinkGo
       </button>
     </form>
   </div>
 
-  {/* Contenedor de Productos Registrados en Vivo */}
-  <div className="mt-8">
-    <h3 className="text-xl font-bold text-white mb-4">Catálogo en Validación y Nuevos Ingresos</h3>
-    <div id="live-products-list" className="space-y-3">
-      {/* Aquí aparecerán los productos que vayas enviando */}
-      <div className="bg-gray-950 border border-gray-800 p-4 rounded-xl text-gray-500 text-sm text-center">
-        Aún no hay productos enviados en esta sesión. ¡Prueba llenando el formulario arriba!
+  {/* Contenedor del Catálogo en Vivo */}
+  <div className="mt-10">
+    <h3 className="text-xl font-bold text-white mb-4">Catálogo Global en Validación y Nuevos Ingresos</h3>
+    <div id="live-products-list" className="space-y-4">
+      <div id="empty-catalog-message" className="bg-gray-950 border border-gray-800 p-8 rounded-2xl text-gray-500 text-sm text-center">
+        Aún no hay productos registrados en esta sesión. ¡Prueba llenando el formulario superior para ver tu inventario en tiempo real!
       </div>
     </div>
   </div>
-</section>
-      
+</section>      
       {/* FOOTER */}
       <footer className={`border-t py-6 text-center text-xs ${darkMode ? 'border-gray-800 text-gray-500 bg-gray-900/40' : 'border-gray-200 text-gray-500 bg-gray-100'}`}>
         <p>© 2026 DataLinkGo C.A. Todos los derechos reservados. Operando globalmente con pasarelas seguras.</p>
