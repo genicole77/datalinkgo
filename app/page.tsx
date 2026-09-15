@@ -888,16 +888,7 @@ export default function DatalinkGoApp() {
           const emailInput = document.getElementById('user-registration-email') as HTMLInputElement;
           const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
           
-          if (emailInput && emailInput.value.trim() !== '' && emailInput.value.includes('@')) {
-            alert(`¡Registro exitoso para ${emailInput.value.trim()}! Kit seleccionado: ${kitSelect.value.toUpperCase()}. Bienvenido a DataLinkGo.`);
-            emailInput.value = '';
-          } else {
-            alert('Por favor, introduce un correo electrónico válido para completar tu registro.');
-          }
-        }}
-        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
-      >
-<div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+     <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
             <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
@@ -918,28 +909,26 @@ export default function DatalinkGoApp() {
                 <option value="dominios">Registro de Dominios</option>
               </select>
 
-              <div className="pt-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const emailInput = document.getElementById('user-email') as HTMLInputElement;
-                    const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-                    if (emailInput && emailInput.value.trim() !== '') {
-                      alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
-                      emailInput.value = '';
-                    } else {
-                      alert('Por favor, introduce un correo electrónico válido.');
-                    }
-                  }}
-                  className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
-                >
-                  Registrarse en la Plataforma
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  const emailInput = document.getElementById('user-email') as HTMLInputElement;
+                  const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
+                  if (emailInput && emailInput.value.trim() !== '') {
+                    alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
+                    emailInput.value = '';
+                  } else {
+                    alert('Por favor, introduce un correo electrónico válido.');
+                  }
+                }}
+                className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
+              >
+                Registrarse en la Plataforma
+              </button>
             </div>
           </div>
         </section>
       </div>
     </div>
   );
-}
+}   
