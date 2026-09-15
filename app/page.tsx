@@ -887,8 +887,7 @@ export default function DatalinkGoApp() {
         onClick={() => {
           const emailInput = document.getElementById('user-registration-email') as HTMLInputElement;
           const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
-          
-     <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+  <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
             <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
@@ -915,10 +914,10 @@ export default function DatalinkGoApp() {
                   const emailInput = document.getElementById('user-email') as HTMLInputElement;
                   const kitSelect = document.getElementById('user-selected-kit') as HTMLSelectElement;
                   if (emailInput && emailInput.value.trim() !== '') {
-                    alert(`¡Registro exitoso para ${emailInput.value} con el kit ${kitSelect.value}!`);
+                    alert('Registro exitoso para: ' + emailInput.value);
                     emailInput.value = '';
                   } else {
-                    alert('Por favor, introduce un correo electrónico válido.');
+                    alert('Por favor, introduce un correo electronico valido.');
                   }
                 }}
                 className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold transition shadow-lg shadow-red-600/30 mt-4"
@@ -931,4 +930,4 @@ export default function DatalinkGoApp() {
       </div>
     </div>
   );
-}   
+}
