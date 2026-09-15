@@ -536,6 +536,67 @@ export default function GlobalECommercePlatform() {
 
       </main>
 
+  {/* Sección de Productos Recomendados y Afiliados */}
+<section className="py-12 px-4 max-w-6xl mx-auto border-t border-gray-800 mt-12">
+  <div className="text-center mb-10">
+    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Recomendaciones y Recursos</h2>
+    <p className="text-gray-400 text-sm md:text-base">Herramientas, cursos y productos seleccionados para impulsar tus proyectos.</p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {/* Tarjeta 1: Ejemplo Hotmart / Curso */}
+    <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-blue-500 transition-all">
+      <div>
+        <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-950/50 px-2.5 py-1 rounded-full">Hotmart / Curso</span>
+        <h3 className="text-lg font-bold text-white mt-4 mb-2">Aprende Automatización Digital</h3>
+        <p className="text-gray-400 text-sm mb-4">Domina las herramientas tecnológicas y escala tus ingresos desde casa paso a paso.</p>
+      </div>
+      <a 
+        href="AQUI_PEGAS_TU_LINK_DE_AFILIADO_DE_HOTMART" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-lg transition-colors text-sm"
+      >
+        Ver Oferta
+      </a>
+    </div>
+
+    {/* Tarjeta 2: Ejemplo Amazon */}
+    <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-blue-500 transition-all">
+      <div>
+        <span className="text-xs font-semibold uppercase tracking-wider text-amber-400 bg-amber-950/50 px-2.5 py-1 rounded-full">Amazon / Gadget</span>
+        <h3 className="text-lg font-bold text-white mt-4 mb-2">Equipos y Tecnología Recomendada</h3>
+        <p className="text-gray-400 text-sm mb-4">Los mejores dispositivos probados para optimizar tu espacio de trabajo y productividad.</p>
+      </div>
+      <a 
+        href="AQUI_PEGAS_TU_LINK_DE_AFILIADO_DE_AMAZON" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-medium py-2.5 rounded-lg transition-colors text-sm"
+      >
+        Ver en Amazon
+      </a>
+    </div>
+
+    {/* Tarjeta 3: Ejemplo Producto Digital / E-book */}
+    <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-blue-500 transition-all">
+      <div>
+        <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/50 px-2.5 py-1 rounded-full">E-book / Guía</span>
+        <h3 className="text-lg font-bold text-white mt-4 mb-2">Kit de Recursos Digitales</h3>
+        <p className="text-gray-400 text-sm mb-4">Plantillas y estrategias listas para usar en tus negocios online y emprendimientos.</p>
+      </div>
+      <a 
+        href="AQUI_PEGAS_TU_OTRO_LINK_DE_AFILIADO" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2.5 rounded-lg transition-colors text-sm"
+      >
+        Obtener Acceso
+      </a>
+    </div>
+  </div>
+</section>
+      
       {/* FOOTER */}
       <footer className={`border-t py-6 text-center text-xs ${darkMode ? 'border-gray-800 text-gray-500 bg-gray-900/40' : 'border-gray-200 text-gray-500 bg-gray-100'}`}>
         <p>© 2026 DataLinkGo C.A. Todos los derechos reservados. Operando globalmente con pasarelas seguras.</p>
