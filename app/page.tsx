@@ -596,6 +596,55 @@ export default function GlobalECommercePlatform() {
     </div>
   </div>
 </section>
+
+{/* Sección de Registro de Productos para Proveedores y Creadores */}
+<section className="py-12 px-4 max-w-4xl mx-auto border-t border-gray-800 mt-12">
+  <div className="text-center mb-8">
+    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Publica tu Producto en DataLinkGo</h2>
+    <p className="text-gray-400 text-sm md:text-base">¿Eres fabricante, creador de contenido o distribuidor? Sube tus productos o cursos a nuestra plataforma.</p>
+  </div>
+
+  <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl">
+    <form onSubmit={(e) => { e.preventDefault(); alert('¡Producto enviado con éxito para revisión de DataLinkGo!'); }} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Nombre del Producto o Creador</label>
+          <input 
+            type="text" 
+            required 
+            placeholder="Ej: Perfume Original / Curso Digital" 
+            className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Tipo de Producto</label>
+          <select className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm">
+            <option>Producto Físico (Envíos / Inventario)</option>
+            <option>Infoproducto / Curso Digital (Hotmart)</option>
+            <option>E-book / Recurso Descargable</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Descripción y Detalles de Envíos / Stock</label>
+        <textarea 
+          rows={3} 
+          required 
+          placeholder="Indica de dónde se despacha (ej: stock en EE.UU. para Latinoamérica) o detalles del curso..." 
+          className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm resize-none"
+        ></textarea>
+      </div>
+
+      <button 
+        type="submit" 
+        className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-lg transition-colors text-sm shadow-lg"
+      >
+        Enviar Producto al Marketplace
+      </button>
+    </form>
+  </div>
+</section>
       
       {/* FOOTER */}
       <footer className={`border-t py-6 text-center text-xs ${darkMode ? 'border-gray-800 text-gray-500 bg-gray-900/40' : 'border-gray-200 text-gray-500 bg-gray-100'}`}>
