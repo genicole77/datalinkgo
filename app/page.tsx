@@ -665,16 +665,19 @@ export default function GlobalECommercePlatform() {
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
       const fileInput = form.elements.namedItem('productFile') as HTMLInputElement;
 
-      let mediaHtml = '';
-      if (fileInput.files && fileInput.files[0]) {
-        const file = fileInput.files[0];
+   let mediaHtml = '<div class="grid grid-cols-2 gap-3 mt-4">';
+    if (fileInput.files && fileInput.files.length > 0) {
+      for (let i = 0; i < fileInput.files.length; i++) {
+        const file = fileInput.files[i];
         const fileUrl = URL.createObjectURL(file);
         if (file.type.startsWith('video/')) {
-mediaHtml = `<video src="${fileUrl}" controls preload="metadata" class="w-full h-64 object-contain rounded-xl mt-4 bg-black"></video>`;
+          mediaHtml += `<div class="col-span-2"><video src="${fileUrl}" controls preload="metadata" class="w-full h-64 object-contain rounded-xl bg-black"></video></div>`;
         } else {
-          mediaHtml = `<img src="${fileUrl}" alt="Media del producto" class="w-full h-52 object-cover rounded-xl mt-4" />`;
+          mediaHtml += `<div><img src="${fileUrl}" alt="Foto del producto" class="w-full h-40 object-cover rounded-xl border border-gray-800" /></div>`;
         }
       }
+    }
+    mediaHtml += '</div>'; 
 
       const newProduct = {
         name: nameInput.value,
