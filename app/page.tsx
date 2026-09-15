@@ -797,77 +797,7 @@ export default function DatalinkGoApp() {
         type="url" 
         placeholder="https://tu-enlace-de-afiliado.com" 
         id="active-affiliate-url-input"
-        className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
-      />
-    </div>
-
-    <div className="flex flex-wrap gap-4">
-      <button 
-        type="button"
-        onClick={() => {
-          const inputElement = document.getElementById('active-affiliate-url-input') as HTMLInputElement;
-          if (inputElement && inputElement.value.trim() !== '') {
-            let targetUrl = inputElement.value.trim();
-            if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
-              targetUrl = 'https://' + targetUrl;
-            }
-            window.open(targetUrl, '_blank');
-          } else {
-            alert('Por favor, introduce una URL válida (ejemplo: https://tu-sitio.com)');
-          }
-        }}
-        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
-      >
-        <span>Probar Enlace en Vivo</span>
-        <span>→</span>
-      </button>
-
-      <button 
-        type="button"
-        onClick={() => {
-          const inputElement = document.getElementById('active-affiliate-url-input') as HTMLInputElement;
-          if (inputElement) {
-            inputElement.value = '';
-          }
-          alert('Campo limpiado con éxito. Listo para un nuevo enlace.');
-        }}
-        className="border border-gray-700 hover:bg-gray-800 text-gray-300 font-bold px-4 py-3 rounded-xl transition-all text-sm cursor-pointer"
-      >
-        Limpiar
-      </button>
-    </div>
-  </div>
-</div>
-
-{/* MÓDULO ADICIONAL: REGISTRO Y ACCESO DIRECTO A KITS (AGREGADO LIMPIO) */}
-<div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
-  <div className="space-y-2">
-    <h3 className="text-xl font-bold flex items-center space-x-2">
-      <span>🚀 Registro de Usuario y Acceso a Kits</span>
-    </h3>
-    <p className="text-xs sm:text-sm text-gray-400">
-      Crea tu cuenta de acceso rápido o selecciona el kit de trabajo operativo para desplegar tu infraestructura digital.
-    </p>
-  </div>
-
-  <div className="space-y-4">
-    {/* CAMPO DE REGISTRO DE CORREO */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div>
-        <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-red-500">
-          Tu Correo Electrónico
-        </label>
-        <input 
-          type="email" 
-          placeholder="tu-correo@dominio.com" 
-          id="user-registration-email"
-          className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-950 border-gray-800 text-gray-100"
-        />
-      </div>
-      <div>
-        <label className="block text-xs font-bold uppercase tracking-wider mb-2 text-red-500">
-          Selecciona tu Kit de Interés
-   <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+     <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold text-white mb-2">Registro y Selección de Kits</h3>
             <p className="text-gray-400 text-sm mb-4">Introduce tu correo y selecciona tu acceso directo:</p>
 
@@ -897,6 +827,6 @@ export default function DatalinkGoApp() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
