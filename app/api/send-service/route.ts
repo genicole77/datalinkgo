@@ -3,18 +3,18 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, category, details } = body;
+    console.log('Datos recibidos en el servidor:', body);
 
-    console.log('Solicitud de servicio recibida:', { name, email, category, details });
+    // Aquí puedes procesar o guardar los datos luego si deseas
 
     return NextResponse.json(
-      { message: 'Solicitud procesada con éxito' },
+      { success: true, message: 'Solicitud enviada con éxito' },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error en la API send-service:', error);
+    console.error('Error:', error);
     return NextResponse.json(
-      { error: 'Error interno del servidor' },
+      { success: false, error: 'Error al procesar la solicitud' },
       { status: 500 }
     );
   }
