@@ -767,22 +767,7 @@ export default function DatalinkGoApp() {
           const input = document.getElementById('global-custom-affiliate-input') as HTMLInputElement;
           if (input && input.value) {
             window.open(input.value, '_blank');
-          } else {
-            alert('Por favor, introduce un enlace válido.');
-          }
-        }}
-        className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-red-600/20 text-sm flex items-center space-x-2 cursor-pointer"
-      >
-        <span>Probar Enlace en Vivo</span>
-        <span>→</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-{/* MÓDULO ADICIONAL: VALIDADOR DE ENLACES ACTIVO (AGREGADO LIMPIO) */}
-<div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
-<input
+  <input
                 type="text"
                 placeholder="https://tu-enlace-de-afiliado.com"
                 id="active-affiliate-url-input"
