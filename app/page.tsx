@@ -727,12 +727,7 @@ export default function DatalinkGoApp() {
         </div>
         <a 
           href="https://www.namecheap.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="block text-center w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-md hover:opacity-95 transition-opacity"
-        >
-          Registrar Dominio
-     <input
+         <input
             type="text"
             className="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none"
             id="global-custom-affiliate-input"
@@ -782,6 +777,6 @@ export default function DatalinkGoApp() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
