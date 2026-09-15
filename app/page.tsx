@@ -782,12 +782,7 @@ export default function DatalinkGoApp() {
 
 {/* MÓDULO ADICIONAL: VALIDADOR DE ENLACES ACTIVO (AGREGADO LIMPIO) */}
 <div className="my-8 p-6 sm:p-8 rounded-2xl border bg-gray-900/90 border-gray-800 space-y-6 shadow-xl text-gray-100">
-  <div className="space-y-2">
-    <h3 className="text-xl font-bold flex items-center space-x-2">
-      <span>🔗 Validador y Gestor de Enlaces Activos</span>
-    </h3>
-    <p className="text-xs sm:text-sm text-gray-400">
-   <input
+<input
                 type="text"
                 placeholder="https://tu-enlace-de-afiliado.com"
                 id="active-affiliate-url-input"
