@@ -787,12 +787,7 @@ export default function DatalinkGoApp() {
       <span>🔗 Validador y Gestor de Enlaces Activos</span>
     </h3>
     <p className="text-xs sm:text-sm text-gray-400">
-      Prueba tu enlace de afiliado, pasarela de pago o URL de destino antes de lanzarlo al tráfico masivo.
-    </p>
-  </div>
-
-  <div className="space-y-4">
-<input
+   <input
                 type="text"
                 placeholder="https://tu-enlace-de-afiliado.com"
                 id="active-affiliate-url-input"
