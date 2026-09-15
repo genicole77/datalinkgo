@@ -670,7 +670,7 @@ export default function GlobalECommercePlatform() {
         const file = fileInput.files[0];
         const fileUrl = URL.createObjectURL(file);
         if (file.type.startsWith('video/')) {
-          mediaHtml = `<video src="${fileUrl}" controls class="w-full h-52 object-cover rounded-xl mt-4"></video>`;
+mediaHtml = `<video src="${fileUrl}" controls preload="metadata" class="w-full h-52 object-cover rounded-xl mt-4 bg-black"></video>`;
         } else {
           mediaHtml = `<img src="${fileUrl}" alt="Media del producto" class="w-full h-52 object-cover rounded-xl mt-4" />`;
         }
