@@ -14,12 +14,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DataLinkGo - Comparte tus archivos al instante",
-  description: "Plataforma rápida y segura para compartir archivos, videos e imágenes.",
+  description: "Plataforma rápida, segura y profesional para compartir tus archivos, videos e imágenes en segundos.",
+  openGraph: {
+    title: "DataLinkGo - Comparte tus archivos al instante",
+    description: "Plataforma rápida, segura y profesional para compartir tus archivos, videos e imágenes en segundos.",
+    url: "https://datalinkgo.com",
+    siteName: "DataLinkGo",
+    locale: "es_ES",
+    type: "website",
+  },
   other: {
-    "impact-site-verification": "Impact-Site-Verification: a5f93ebe-8847-4d01-b987-9c5410358b35"
+    "impact-site-verification": "Impact-Site-Verification: a5f93ebe-8847-4d01-b987-9c5410358b35",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
