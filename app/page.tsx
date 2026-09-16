@@ -680,7 +680,7 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
         wholesale: wholesalePrice.value || 'N/D',
         minW: minWholesale.value || '1',
         desc: descInput.value,
-     media: productFilesList,
+ media: productFilesList.map((f: File) => f.name).join(', '),
         date: new Date().toLocaleDateString()
       };
 
