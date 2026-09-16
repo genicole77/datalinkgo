@@ -713,7 +713,7 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
    ${productFilesList.map(file => {
   const url = URL.createObjectURL(file);
   if (file.type.startsWith('video/')) {
-    return `<video src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" controls></video>`;
+ return `<video src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" controls playsinline muted></video>`;
   } else {
     return `<img src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" alt="Media del producto" />`;
   }
