@@ -17,6 +17,15 @@ export default function GlobalECommercePlatform() {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('binance');
   const [activeTab, setActiveTab] = useState('dashboard');
 
+const [productFilesList, setProductFilesList] = useState<File[]>([]);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const newFiles = Array.from(e.target.files);
+      setProductFilesList((prevFiles) => [...prevFiles, ...newFiles]);
+    }
+  };
+  
   // Estados para formularios de Servicios y Publicidad
   const [serviceName, setServiceName] = useState('');
   const [serviceEmail, setServiceEmail] = useState('');
