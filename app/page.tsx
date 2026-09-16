@@ -800,17 +800,21 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
         ></textarea>
       </div>
 
-      <div>
-        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Multimedia (Foto del Producto o Video de Presentación)</label>
-       <input
-            type="file"
-            multiple
-            name="productFile"
-            accept="image/*,video/*"
-            className="w-full bg-gray-950 border border-gray-800 rounded-lg p-3 text-gray-400 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500 transition-colors"
-          />
-        <p className="text-xs text-gray-500 mt-1">Sube una imagen clara o un video corto (MP4) para la vitrina del marketplace.</p>
-      </div>
+    <div>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">
+          Archivos del Producto (Sube uno a uno o en grupo)
+        </label>
+        <input
+          type="file"
+          multiple
+          accept="image/*,video/*"
+          onChange={handleFileChange}
+          className="w-full bg-gray-950 border border-gray-800 rounded-lg p-3 text-gray-400 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500 transition-colors cursor-pointer"
+        />
+        <p className="text-xs text-blue-400 font-medium mt-1">
+          Archivos acumulados listos para subir: {productFilesList.length}
+        </p>
+      </div> 
 
       <button 
         type="submit" 
