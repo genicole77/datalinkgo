@@ -674,7 +674,7 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
       const fileInput = form.elements.namedItem('productFile') as HTMLInputElement;
 
-  let mediantml = "";
+let mediantml = "";
     for (let i = 0; i < productFilesList.length; i++) {
       const file = productFilesList[i];
       const fileurl = URL.createObjectURL(file);
@@ -684,7 +684,6 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
         mediantml += `<div><img src="${fileurl}" alt="Product" class="w-full h-48 object-cover rounded-lg" /></div>`;
       }
     }
-    mediantml += "</div>";
 
       const newProduct = {
         name: nameInput.value,
