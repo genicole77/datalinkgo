@@ -672,16 +672,13 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
       const wholesalePrice = form.elements.namedItem('wholesalePrice') as HTMLInputElement;
       const minWholesale = form.elements.namedItem('minWholesale') as HTMLInputElement;
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
- let mediantml = "";
-    for (let i = 0; i < productFilesList.length; i++) {
-      const file = productFilesList[i];
+let mediantml = productFilesList.map((file) => {
       const fileurl = URL.createObjectURL(file);
       if (file.type.startsWith("video/")) {
-        mediantml += `<div class="col-span-2"><video src="${fileurl}" controls class="w-full h-48 object-cover rounded-lg"></video></div>`;
-      } else {
-        mediantml += `<div><img src="${fileurl}" alt="Product" class="w-full h-48 object-cover rounded-lg" /></div>`;
+        return `<div class="col-span-2"><video src="${fileurl}" controls class="w-full h-48 object-cover rounded-lg"></video></div>`;
       }
-    }
+      return `<div><img src="${fileurl}" alt="Product" class="w-full h-48 object-cover rounded-lg" /></div>`;
+    }).join("");
 
       const newProduct = {
         name: nameInput.value,
