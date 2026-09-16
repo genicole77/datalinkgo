@@ -680,7 +680,7 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
         wholesale: wholesalePrice.value || 'N/D',
         minW: minWholesale.value || '1',
         desc: descInput.value,
-        media: mediaHtml,
+     media: productFilesList,
         date: new Date().toLocaleDateString()
       };
 
