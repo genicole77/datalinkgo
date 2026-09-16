@@ -19,10 +19,10 @@ export default function GlobalECommercePlatform() {
 
 const [productFilesList, setProductFilesList] = useState<File[]>([]);
 
- const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      const newfiles = Array.from(e.target.files).slice(0,5);
-      setProductFilesList(newfiles);
+      const chosenFiles = Array.from(e.target.files);
+      setProductFilesList(prevList => [...prevList, ...chosenFiles].slice(0, 5));
     }
   };
   
