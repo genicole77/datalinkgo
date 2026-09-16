@@ -710,7 +710,14 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
             </div>
           </div>
 
-          ${newProduct.media}
+   ${productFilesList.map(file => {
+  const url = URL.createObjectURL(file);
+  if (file.type.startsWith('video/')) {
+    return `<video src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" controls></video>`;
+  } else {
+    return `<img src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" alt="Media del producto" />`;
+  }
+}).join('')}
         `;
         listContainer.prepend(item);
       }
