@@ -672,7 +672,6 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
       const wholesalePrice = form.elements.namedItem('wholesalePrice') as HTMLInputElement;
       const minWholesale = form.elements.namedItem('minWholesale') as HTMLInputElement;
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
-let mediantml = `<p>${productFilesList.length} archivo(s) adjunto(s)</p>`;
 
       const newProduct = {
         name: nameInput.value,
