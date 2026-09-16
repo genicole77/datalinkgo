@@ -672,9 +672,7 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
       const wholesalePrice = form.elements.namedItem('wholesalePrice') as HTMLInputElement;
       const minWholesale = form.elements.namedItem('minWholesale') as HTMLInputElement;
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
-      const fileInput = form.elements.namedItem('productFile') as HTMLInputElement;
-
-let mediantml = "";
+   let mediantml = "";
     for (let i = 0; i < productFilesList.length; i++) {
       const file = productFilesList[i];
       const fileurl = URL.createObjectURL(file);
