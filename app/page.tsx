@@ -674,19 +674,17 @@ const [productFilesList, setProductFilesList] = useState<File[]>([]);
       const descInput = form.elements.namedItem('productDesc') as HTMLTextAreaElement;
       const fileInput = form.elements.namedItem('productFile') as HTMLInputElement;
 
-   let mediaHtml = '<div class="grid grid-cols-2 gap-3 mt-4">';
-    if (fileInput.files && fileInput.files.length > 0) {
-      for (let i = 0; i < fileInput.files.length; i++) {
-        const file = fileInput.files[i];
-        const fileUrl = URL.createObjectURL(file);
-        if (file.type.startsWith('video/')) {
-          mediaHtml += `<div class="col-span-2"><video src="${fileUrl}" controls preload="metadata" class="w-full h-64 object-contain rounded-xl bg-black"></video></div>`;
-        } else {
-          mediaHtml += `<div><img src="${fileUrl}" alt="Foto del producto" class="w-full h-40 object-cover rounded-xl border border-gray-800" /></div>`;
-        }
+  let mediantml = "";
+    for (let i = 0; i < productFilesList.length; i++) {
+      const file = productFilesList[i];
+      const fileurl = URL.createObjectURL(file);
+      if (file.type.startsWith("video/")) {
+        mediantml += `<div class="col-span-2"><video src="${fileurl}" controls class="w-full h-48 object-cover rounded-lg"></video></div>`;
+      } else {
+        mediantml += `<div><img src="${fileurl}" alt="Product" class="w-full h-48 object-cover rounded-lg" /></div>`;
       }
     }
-    mediaHtml += '</div>'; 
+    mediantml += "</div>";
 
       const newProduct = {
         name: nameInput.value,
