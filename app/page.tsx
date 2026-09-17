@@ -712,13 +712,15 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 productFilesList.map(file => {
       const url = URL.createObjectURL(file);
-      if (file.type.startsWith('video/')) {
+     if (file.type.startsWith('video/')) {
         const item = document.createElement('video');
         item.src = url;
         item.controls = true;
         item.className = "w-32 h-32 object-cover rounded-lg m-1";
+        item.style.width = '128px';
+        item.style.height = '128px';
         listContainer.prepend(item);
-      } else {
+      }
         const item = document.createElement('img');
         item.src = url;
         item.className = "w-32 h-32 object-cover rounded-lg m-1";
