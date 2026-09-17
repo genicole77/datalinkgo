@@ -710,17 +710,19 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </div>
           </div>
 
-   ${productFilesList.map(file => {
-  const url = URL.createObjectURL(file);
-  if (file.type.startsWith('video/')) {
-return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-1"></video>`;
-  } else {
-    return `<img src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" alt="Media del producto" />`;
-  }
-}).join('')}
-        `;
-        listContainer.prepend(item);
+const mediaItemsHTML = productFilesList.map(file => {
+      const url = URL.createObjectURL(file);
+      if (file.type.startsWith('video/')) {
+        return `<div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black/45"><video src="${url}" controls class="w-full h-32 object-cover"></video></div>`;
+      } else {
+        return `<div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black/45"><img src="${url}" class="w-full h-32 object-cover" alt="Media del producto" /></div>`;
       }
+    }).join('');
+
+    const listContainer = document.getElementById('preview-container');
+    if (listContainer) {
+      listContainer.innerHTML = `<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">${mediaItemsHTML}</div>`;
+    }
 
       alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
       form.reset();
