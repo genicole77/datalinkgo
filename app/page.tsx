@@ -717,14 +717,12 @@ productFilesList.map(file => {
         item.src = url;
         item.controls = true;
         item.className = "w-32 h-32 object-cover rounded-lg m-1";
-        item.style.width = '128px';
-        item.style.height = '128px';
         listContainer.prepend(item);
       } else {
-        const imgItem = document.createElement('img');
-        imgItem.src = url;
-        imgItem.className = "w-32 h-32 object-cover rounded-lg m-1";
-        listContainer.prepend(imgItem);
+        const item = document.createElement('img');
+        item.src = url;
+        item.className = "w-32 h-32 object-cover rounded-lg m-1";
+        listContainer.prepend(item);
       }
     });
       alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
