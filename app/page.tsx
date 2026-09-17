@@ -712,7 +712,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 productFilesList.map(file => {
       const url = URL.createObjectURL(file);
-     if (file.type.startsWith('video/')) {
+      if (file.type.startsWith('video/')) {
         const item = document.createElement('video');
         item.src = url;
         item.controls = true;
@@ -720,11 +720,11 @@ productFilesList.map(file => {
         item.style.width = '128px';
         item.style.height = '128px';
         listContainer.prepend(item);
-      }
-        const item = document.createElement('img');
-        item.src = url;
-        item.className = "w-32 h-32 object-cover rounded-lg m-1";
-        listContainer.prepend(item);
+      } else {
+        const imgItem = document.createElement('img');
+        imgItem.src = url;
+        imgItem.className = "w-32 h-32 object-cover rounded-lg m-1";
+        listContainer.prepend(imgItem);
       }
     });
       alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
