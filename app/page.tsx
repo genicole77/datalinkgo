@@ -710,19 +710,21 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </div>
           </div>
 
-const mediaItemsHTML = productFilesList.map(file => {
+productFilesList.map(file => {
       const url = URL.createObjectURL(file);
       if (file.type.startsWith('video/')) {
-        return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-1"></video>`;
+        const item = document.createElement('video');
+        item.src = url;
+        item.controls = true;
+        item.className = "w-32 h-32 object-cover rounded-lg m-1";
+        listContainer.prepend(item);
       } else {
-        return `<img src="${url}" class="w-32 h-32 object-cover rounded-lg m-1" alt="Media del producto" />`;
+        const item = document.createElement('img');
+        item.src = url;
+        item.className = "w-32 h-32 object-cover rounded-lg m-1";
+        listContainer.prepend(item);
       }
-    }).join('');
-
-    const listContainer = document.getElementById('preview-container');
-    if (listContainer) {
-      listContainer.innerHTML = mediaItemsHTML;
-    }
+    });
       alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
       form.reset();
     }} className="space-y-6">
