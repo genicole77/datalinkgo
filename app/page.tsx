@@ -361,12 +361,13 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
               <p className="text-[10px] text-gray-500 mt-2">Comparte este enlace y recibe pagos automáticos por cada referido.</p>
             </div>
 
-         {/* FORMULARIO DE REGISTRO COMPLETO */}
-<div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
+// 1. Asegúrate de tener esta línea con los demás estados arriba en tu componente:
+const [userPassword, setUserPassword] = useState('');
 
-  <h3 className="text-base font-bold mb-3 flex items-center gap-2">
-    📝 Registro de Usuario
-  </h3>
+// 2. Y este es el formulario completo limpio y ordenado para reemplazar en tu código:
+{/* FORMULARIO DE REGISTRO COMPLETO */}
+<div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
+  <h3 className="text-base font-bold mb-1">📝 Registro de Usuario</h3>
   <p className="text-xs text-gray-400 mb-4">Crea tu cuenta en datalinkgo.com:</p>
 
   <form onSubmit={handleRegistration} className="space-y-3">
@@ -418,6 +419,8 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
       />
     </div>
+  </form>
+</div>
 
                 {/* PASARELAS DE PAGO Y RETIROS */}
                 <div className="pt-1">
