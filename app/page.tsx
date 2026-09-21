@@ -363,8 +363,10 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 {/* FORMULARIO DE REGISTRO COMPLETO */}
 <div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
-  <h3 className="text-base font-bold mb-1">📝 Registro de Usuario</h3>
-  <p className="text-xs text-gray-400 mb-4">Crea tu cuenta en datalinkgo.com:</p>
+  <h3 className="text-base font-bold mb-3 flex items-center gap-2">
+    📝 Registro y Activación Multiregional
+  </h3>
+  <p className="text-xs text-gray-400 mb-4">Crea tu cuenta de socio o cliente global:</p>
 
   <form onSubmit={handleRegistration} className="space-y-3">
     <input
@@ -380,14 +382,6 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       placeholder="tu@correo.com"
       value={userEmail}
       onChange={(e) => setUserEmail(e.target.value)}
-      className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-    />
-
-    <input
-      type="password"
-      placeholder="Contraseña segura"
-      value={userPassword}
-      onChange={(e) => setUserPassword(e.target.value)}
       className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
     />
 
@@ -415,6 +409,16 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
       />
     </div>
+
+    <select
+      value={selectedKit}
+      onChange={(e) => setSelectedKit(e.target.value)}
+      className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+    >
+      <option value="emprendedor">Kit Emprendedor Pro ($29)</option>
+      <option value="automatizacion">Kit Automatización Avanzada ($49)</option>
+      <option value="dominios">Registro de Dominio (datalinkgo.com - $15)</option>
+    </select>
   </form>
 </div>
                 {/* PASARELAS DE PAGO Y RETIROS */}
