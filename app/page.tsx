@@ -362,8 +362,9 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </div>
 
 {/* FORMULARIO DE REGISTRO COMPLETO */}
-
-  Crea tu cuenta en datalinkgo.com:
+<div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
+  <h3 className="text-base font-bold mb-1">📝 Registro de Usuario</h3>
+  <p className="text-xs text-gray-400 mb-4">Crea tu cuenta en datalinkgo.com:</p>
 
   <input
     type="text"
@@ -410,6 +411,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange={(e) => setUserRegion(e.target.value)}
     className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
   />
+</div>
 </div>
     <select
       value={selectedKit}
