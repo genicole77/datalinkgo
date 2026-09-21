@@ -362,54 +362,55 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </div>
 
 {/* FORMULARIO DE REGISTRO COMPLETO */}
-<div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
-  <h3 className="text-base font-bold mb-3 flex items-center gap-2">
-    📝 Registro y Activación Multiregional
-  </h3>
-  <p className="text-xs text-gray-400 mb-4">Crea tu cuenta de socio o cliente global:</p>
 
-  <form onSubmit={handleRegistration} className="space-y-3">
-    <input
-      type="text"
-      placeholder="Tu Nombre Completo"
-      value={userName}
-      onChange={(e) => setUserName(e.target.value)}
-      className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-    />
+  Crea tu cuenta en datalinkgo.com:
 
-    <input
-      type="email"
-      placeholder="tu@correo.com"
-      value={userEmail}
-      onChange={(e) => setUserEmail(e.target.value)}
-      className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-    />
+  <input
+    type="text"
+    placeholder="Tu Nombre Completo"
+    value={userName}
+    onChange={(e) => setUserName(e.target.value)}
+    className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+  /><input
+  type="email"
+  placeholder="tu@correo.com"
+  value={userEmail}
+  onChange={(e) => setUserEmail(e.target.value)}
+  className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+/>
 
-    <input
-      type="tel"
-      placeholder="Teléfono / WhatsApp (+...)"
-      value={userPhone}
-      onChange={(e) => setUserPhone(e.target.value)}
-      className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-    />
+<input
+  type="password"
+  placeholder="Contraseña segura"
+  value={userPassword}
+  onChange={(e) => setUserPassword(e.target.value)}
+  className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+/>
 
-    <div className="grid grid-cols-2 gap-2">
-      <input
-        type="text"
-        placeholder="País"
-        value={userCountry}
-        onChange={(e) => setUserCountry(e.target.value)}
-        className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-      />
-      <input
-        type="text"
-        placeholder="Ciudad / Región"
-        value={userRegion}
-        onChange={(e) => setUserRegion(e.target.value)}
-        className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
-      />
-    </div>
+<input
+  type="tel"
+  placeholder="Teléfono / WhatsApp (+...)"
+  value={userPhone}
+  onChange={(e) => setUserPhone(e.target.value)}
+  className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+/>
 
+<div className="grid grid-cols-2 gap-2">
+  <input
+    type="text"
+    placeholder="País"
+    value={userCountry}
+    onChange={(e) => setUserCountry(e.target.value)}
+    className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+  />
+  <input
+    type="text"
+    placeholder="Ciudad / Región"
+    value={userRegion}
+    onChange={(e) => setUserRegion(e.target.value)}
+    className={`w-full px-3 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500' : 'bg-gray-50 border-gray-300 text-gray-900'}`}
+  />
+</div>
     <select
       value={selectedKit}
       onChange={(e) => setSelectedKit(e.target.value)}
