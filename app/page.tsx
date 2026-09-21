@@ -361,10 +361,6 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
               <p className="text-[10px] text-gray-500 mt-2">Comparte este enlace y recibe pagos automáticos por cada referido.</p>
             </div>
 
-// 1. Asegúrate de tener esta línea con los demás estados arriba en tu componente:
-const [userPassword, setUserPassword] = useState('');
-
-// 2. Y este es el formulario completo limpio y ordenado para reemplazar en tu código:
 {/* FORMULARIO DE REGISTRO COMPLETO */}
 <div className={`border rounded-2xl p-6 shadow-xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
   <h3 className="text-base font-bold mb-1">📝 Registro de Usuario</h3>
@@ -421,7 +417,6 @@ const [userPassword, setUserPassword] = useState('');
     </div>
   </form>
 </div>
-
                 {/* PASARELAS DE PAGO Y RETIROS */}
                 <div className="pt-1">
                   <label className="block text-[11px] font-semibold text-gray-400 mb-1">Método de Pago / Retiro de Comisiones:</label>
