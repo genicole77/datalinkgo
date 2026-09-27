@@ -450,7 +450,7 @@ const handleRegistration = (e: React.FormEvent) => {
     />
 </div>
         
-     <button
+ <button
             type="submit"
             className="w-full py-3 rounded-xl bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:opacity-95 text-white font-bold text-xs shadow-lg transition-all duration-200"
           >
@@ -472,8 +472,7 @@ const handleRegistration = (e: React.FormEvent) => {
           Abrir Soporte por WhatsApp
         </a>
       </div>
-    </div>
-  </div>
+    </div> 
 );  
         {/* SECCIÓN COMPLETA DE TARIFAS Y PLANES OFICIALES */}
         <section id="tarifas" className={`border rounded-3xl p-8 shadow-2xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
