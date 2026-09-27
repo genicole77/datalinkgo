@@ -456,7 +456,6 @@ const handleRegistration = (e: React.FormEvent) => {
           >
             Completar Registro y Acceso
           </button>
-        </form>
 
       {/* SOPORTE DIRECTO WHATSAPP */}
       <div className={`border rounded-2xl p-4 shadow-xl text-center ${darkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50/50 border-green-200'}`}>
