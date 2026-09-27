@@ -554,8 +554,7 @@ const handleRegistration = (e: React.FormEvent) => {
           </div>
         </section>
 
-      </main>
-
+    
   {/* Sección de Productos Recomendados y Afiliados */}
 <section className="py-12 px-4 max-w-6xl mx-auto border-t border-gray-800 mt-12">
   <div className="text-center mb-10">
