@@ -450,14 +450,13 @@ const handleRegistration = (e: React.FormEvent) => {
     />
 </div>
         
- <button
+<button
             type="submit"
             className="w-full py-3 rounded-xl bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:opacity-95 text-white font-bold text-xs shadow-lg transition-all duration-200"
           >
             Completar Registro y Acceso
           </button>
         </form>
-      </div>
 
       {/* SOPORTE DIRECTO WHATSAPP */}
       <div className={`border rounded-2xl p-4 shadow-xl text-center ${darkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50/50 border-green-200'}`}>
@@ -472,14 +471,13 @@ const handleRegistration = (e: React.FormEvent) => {
           Abrir Soporte por WhatsApp
         </a>
       </div>
-    </div> 
-);  
-        {/* SECCIÓN COMPLETA DE TARIFAS Y PLANES OFICIALES */}
-        <section id="tarifas" className={`border rounded-3xl p-8 shadow-2xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
-          <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-            <span className="text-xs font-bold text-orange-500 uppercase tracking-wider bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">
-              Transparencia Comercial 2026
-            </span>
+
+      {/* SECCIÓN COMPLETA DE TARIFAS Y PLANES OFICIALES */}
+      <section id="tarifas" className={`border rounded-3xl p-8 shadow-xl ${darkMode ? 'bg-zinc-900/60 border-zinc-800' : 'bg-white border-gray-200'}`}>
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <span className="text-xs font-bold text-orange-500 uppercase tracking-wider bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">
+            Transparencia Comercial 2026
+          </span>
             <h3 className="text-2xl md:text-3xl font-extrabold">Tarifas y Planes de Servicios Globales</h3>
             <p className="text-xs md:text-sm text-gray-400">Precios competitivos adaptados al mercado internacional con soporte multidivisa y retiros instantáneos.</p>
           </div>
