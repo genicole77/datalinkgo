@@ -425,6 +425,7 @@ const handleRegistration = (e: React.FormEvent) => {
             <option value="dominios">Registro de Dominio (datalinkgo.com - $15)</option>
           </select>
 
+  <form onSubmit={handleSubmit} className="space-y-4">
         {/* PASARELAS DE PAGO Y RETIROS */}
         <div className="pt-1">
           <label className="block text-[11px] font-semibold text-gray-400 mb-1">Método de Pago / Retiro de Comisiones:</label>
@@ -456,7 +457,7 @@ const handleRegistration = (e: React.FormEvent) => {
           >
             Completar Registro y Acceso
           </button>
-
+</form>
       {/* SOPORTE DIRECTO WHATSAPP */}
       <div className={`border rounded-2xl p-4 shadow-xl text-center ${darkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50/50 border-green-200'}`}>
         <h4 className="font-bold text-xs text-green-500 mb-1">¿Necesitas Soporte Inmediato?</h4>
