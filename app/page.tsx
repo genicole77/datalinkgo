@@ -439,7 +439,17 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     <option value="transferencia">🏦 Transferencia Bancaria Local</option>
                   </select>
                 </div>
-
+<div className="mt-3">
+    <label className="block text-[11px] font-semibold text-gray-400 mb-1">Contraseña de Acceso:</label>
+    <input
+        type="password"
+        value={userPassword}
+        onChange={(e) => setUserPassword(e.target.value)}
+        placeholder="Introduce tu contraseña"
+        className="w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500"
+    />
+</div>
+        
                 <button
                   type="submit"
                   className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 hover:opacity-95 text-white font-bold text-xs transition shadow-lg shadow-orange-500/30 mt-2"
