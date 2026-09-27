@@ -10,6 +10,7 @@ export default function GlobalECommercePlatform() {
   const [userEmail, setUserEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [userPhone, setUserPhone] = useState('');
+const [userPassword, setUserPassword] = useState('');
   const [userCountry, setUserCountry] = useState('Venezuela');
   const [userRegion, setUserRegion] = useState('Caracas');
   const [selectedKit, setSelectedKit] = useState('emprendedor');
