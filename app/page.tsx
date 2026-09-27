@@ -450,32 +450,31 @@ const handleRegistration = (e: React.FormEvent) => {
     />
 </div>
         
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 hover:opacity-95 text-white font-bold text-xs transition shadow-lg shadow-orange-500/30 mt-2"
-                >
-                  Completar Registro y Acceso
-                </button>
-              </form>
-            </div>
+     <button
+            type="submit"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:opacity-95 text-white font-bold text-xs shadow-lg transition-all duration-200"
+          >
+            Completar Registro y Acceso
+          </button>
+        </form>
+      </div>
 
-            {/* SOPORTE DIRECTO WHATSAPP */}
-            <div className={`border rounded-2xl p-4 shadow-xl text-center ${darkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50 border-green-200'}`}>
-              <h4 className="font-bold text-xs text-green-500 mb-1">¿Necesitas Soporte Inmediato?</h4>
-              <p className="text-[11px] text-gray-400 mb-3">Atención personalizada directa por WhatsApp para pagos y activación.</p>
-              <a
-                href="https://wa.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full py-2.5 rounded-xl bg-green-600 hover:bg-green-700 text-white text-xs font-semibold transition shadow-md shadow-green-600/30"
-              >
-                💬 Abrir Soporte por WhatsApp
-              </a>
-            </div>
-
-          </div>
-        </div>
-
+      {/* SOPORTE DIRECTO WHATSAPP */}
+      <div className={`border rounded-2xl p-4 shadow-xl text-center ${darkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50/50 border-green-200'}`}>
+        <h4 className="font-bold text-xs text-green-500 mb-1">¿Necesitas Soporte Inmediato?</h4>
+        <p className="text-[11px] text-gray-400 mb-3">Atención personalizada directa por WhatsApp para pagos y activaciones.</p>
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block w-full py-2.5 rounded-xl bg-green-600 hover:bg-green-700 text-white text-xs font-semibold shadow-md transition-all duration-200"
+        >
+          Abrir Soporte por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+);  
         {/* SECCIÓN COMPLETA DE TARIFAS Y PLANES OFICIALES */}
         <section id="tarifas" className={`border rounded-3xl p-8 shadow-2xl ${darkMode ? 'bg-gray-900/60 border-gray-800' : 'bg-white border-gray-200'}`}>
           <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
