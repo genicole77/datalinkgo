@@ -420,15 +420,14 @@ const handleRegistration = (e: React.FormEvent) => {
             onChange={(e) => setSelectedKit(e.target.value)}
             className={`w-full px-3.5 py-2.5 rounded-xl border text-xs focus:outline-none focus:border-orange-500 ${darkMode ? 'bg-gray-800 border-gray-700 text-yellow-400 font-medium' : 'bg-gray-50 border-gray-200 text-gray-800 font-medium'}`}
           >
-            <option value="emprendedor">Kit Emprendedor Pro ($29)</option>
+     <option value="emprendedor">Kit Emprendedor Pro ($29)</option>
             <option value="automatizacion">Kit Automatización Avanzada ($49)</option>
             <option value="dominios">Registro de Dominio (datalinkgo.com - $15)</option>
-     </select>
-        </form>
+          </select>
 
         {/* PASARELAS DE PAGO Y RETIROS */}
         <div className="pt-1">
-          <label className="block text-[11px] font-semibold text-gray-400 mb-1">Método de Pago / Retiro de Comisiones:</label> 
+          <label className="block text-[11px] font-semibold text-gray-400 mb-1">Método de Pago / Retiro de Comisiones:</label>
                   <select
                     value={selectedPaymentMethod}
                     onChange={(e) => setSelectedPaymentMethod(e.target.value)}
