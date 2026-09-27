@@ -38,17 +38,18 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   const [adContact, setAdContact] = useState('');
   const [adType, setAdType] = useState('banner_video');
 
-  const handleRegistration = (e: React.FormEvent) => {
+const handleRegistration = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!userEmail.trim() || !userName.trim()) {
-      alert(language === 'es' ? 'Por favor completa al menos tu nombre y correo.' : 'Please fill in at least your name and email.');
-      return;
+    if (!userEmail.trim() || !userName.trim() || !userPassword.trim()) {
+        alert(language === 'es' ? 'Por favor completa tu nombre, correo y contraseña.' : 'Please fill in your name, email, and password.');
+        return;
     }
-    alert(`¡Registro y activación exitosa, ${userName}! Kit seleccionado: ${selectedKit} (${userCountry} - ${userRegion}). Pago configurado via ${selectedPaymentMethod.toUpperCase()}.`);
+    alert(`Registro y activación exitosa, ${userName}! Kit seleccionado: ${selectedKit} (${userCountry} - ${userRegion}). Pago configurado vía ${selectedPaymentMethod}...`);
     setUserEmail('');
     setUserName('');
     setUserPhone('');
-  };
+    setUserPassword('');
+};
 
   const handleServiceSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
