@@ -423,11 +423,12 @@ const handleRegistration = (e: React.FormEvent) => {
       <option value="emprendedor">Kit Emprendedor Pro ($29)</option>
       <option value="automatizacion">Kit Automatización Avanzada ($49)</option>
       <option value="dominios">Registro de Dominio (datalinkgo.com - $15)</option>
-    </select>
-  </form>
-</div>
-                {/* PASARELAS DE PAGO Y RETIROS */}
-                <div className="pt-1">
+  </select>
+          </form>
+        </div>
+
+        {/* PASARELAS DE PAGO Y RETIROS */}
+        <div className="pt-1">
                   <label className="block text-[11px] font-semibold text-gray-400 mb-1">Método de Pago / Retiro de Comisiones:</label>
                   <select
                     value={selectedPaymentMethod}
