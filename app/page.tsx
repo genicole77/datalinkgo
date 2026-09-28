@@ -823,10 +823,10 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
   Publicar en el Catálogo Global de DatalinkGo
 </button>
 </form>
-   <div className="mt-10">
-    <h3 className="text-xl font-bold text-white mb-4">Catálogo Global en Validación y Nuevos Ingresos</h3>
-    <div id="live-products-list" className="space-y-4">
- <div id="empty-catalog-message" className="bg-gray-950 border border-gray-800 p-8 rounded-2xl text-gray-500 text-sm text-center">
+  <div className="mt-10">
+        <h3 className="text-xl font-bold text-white mb-4">Catálogo Global en Validación y Nuevos Ingresos</h3>
+        <div id="live-products-list" className="space-y-4">
+          <div id="empty-catalog-message" className="bg-gray-950 border border-gray-800 rounded-2xl p-8 text-center text-gray-300">
             Aún no hay productos registrados en esta sesión. ¡Prueba llenando el formulario superior para ver tu inventario en tiempo real!
           </div>
         </div>
