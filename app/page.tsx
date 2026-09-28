@@ -841,5 +841,6 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
       <footer className={`border-t py-6 text-center text-xs ${darkMode ? 'border-gray-800 text-gray-500 bg-gray-900/40' : 'border-gray-200 text-gray-500 bg-gray-100'}`}>
        <p>© 2026 DataLinkGo C.A. Todos los derechos reservados. Operando globalmente con pasarelas seguras.</p>
         </footer>
-    );}
+    );
+  }
 
