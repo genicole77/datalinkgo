@@ -823,7 +823,7 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
   Publicar en el Catálogo Global de DatalinkGo
 </button>
 </form>
-</div>
+
 
   {/* Contenedor del Catálogo en Vivo */}
   <div className="mt-10">
