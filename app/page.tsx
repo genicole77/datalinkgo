@@ -734,9 +734,8 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
 
       alert('¡Producto, precios y material multimedia cargados con éxito al marketplace!');
       form.reset();
-    }} className="space-y-6">
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="space-y-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Nombre del Producto o Creador</label>
           <input 
