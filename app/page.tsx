@@ -823,8 +823,6 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
   Publicar en el Catálogo Global de DatalinkGo
 </button>
 </form>
-
-
   {/* Contenedor del Catálogo en Vivo */}
   <div className="mt-10">
     <h3 className="text-xl font-bold text-white mb-4">Catálogo Global en Validación y Nuevos Ingresos</h3>
