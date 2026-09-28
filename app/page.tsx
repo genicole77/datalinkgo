@@ -831,17 +831,15 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
   <div className="mt-10">
     <h3 className="text-xl font-bold text-white mb-4">Catálogo Global en Validación y Nuevos Ingresos</h3>
     <div id="live-products-list" className="space-y-4">
-    <div id="empty-catalog-message" className="bg-gray-950 border border-gray-800 p-8 rounded-2xl text-gray-500 text-sm text-center">
+ <div id="empty-catalog-message" className="bg-gray-950 border border-gray-800 p-8 rounded-2xl text-gray-500 text-sm text-center">
             Aún no hay productos registrados en esta sesión. ¡Prueba llenando el formulario superior para ver tu inventario en tiempo real!
           </div>
         </div>
       </div>
-    </div>
     
     {/* FOOTER */}
-    <footer className="border-t border-gray-800 py-6 text-center text-xs text-gray-500 border-gray-800 bg-gray-900/40">
+    <footer className="border-t border-gray-800 py-6 text-center text-xs text-gray-500 bg-gray-900/40">
       <p>© 2026 DataLinkGo C.A. Todos los derechos reservados. Operando globalmente con pasarelas seguras.</p>
     </footer>
   );
 }
-
