@@ -789,8 +789,7 @@ return `<video src="${url}" controls class="w-32 h-32 object-cover rounded-lg m-
             className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-sm"
           />
         </div>
-      </div>
-
+     
       <div>
         <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Descripción y Logística de Envíos</label>
         <textarea 
